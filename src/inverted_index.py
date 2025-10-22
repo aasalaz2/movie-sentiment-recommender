@@ -1,0 +1,51 @@
+import pandas as pd
+import json
+from collections import defaultdict
+
+
+# Function to build inverted inddex from processed text
+def build_inverted_index(df, text_column, movie_column, extra_columns=None):
+    inverted_index = defaultdict(list)
+
+    for _, row in df.iterrows():
+        movie_name = row[movie_column]
+        text = row[text_column] if isinstance(row[text_column], str) else ""
+        tokens = text.split()
+        token_counts = defaultdict(int)
+
+        for token in tokens:
+            token_counts[token] += 1
+
+        for token, count in token_counts.items():
+            entry = {"movie_name": movie_name, "count": count}
+            if extra_columns:
+                for col in extra_columns:
+                    entry[col] = row[col]
+            inverted_index[token].append(entry)
+
+    return inverted_index
+
+
+# Letterboxd
+letterboxd_df = pd.read_csv("data/processed/letterboxd_reviews_clean.csv")
+letterboxd_index = build_inverted_index(
+    letterboxd_df,
+    text_column="review",
+    movie_column="movie_name",
+    extra_columns=["rating", "like_count"]
+)
+
+with open("indexes/letterboxd_index.json", "w", encoding="utf-8") as f:
+    json.dump(letterboxd_index, f, ensure_ascii=False, indent=2)
+
+
+# Metacritic
+metacritic_df = pd.read_csv("data/processed/metacritic_reviews_clean.csv")
+metacritic_index = build_inverted_index(
+    metacritic_df,
+    text_column="summary",
+    movie_column="movie_name",
+)
+
+with open("indexes/metacritic_index.json", "w", encoding="utf-8") as f:
+    json.dump(metacritic_index, f, ensure_ascii=False, indent=2)
