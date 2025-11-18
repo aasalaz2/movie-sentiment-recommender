@@ -1,10 +1,10 @@
 import re
 import pandas as pd
-from nltk.stem import WordNetLemmatizer
+from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 
 
-lemmatizer = WordNetLemmatizer()
+stemmer = PorterStemmer()
 stop_words = set(stopwords.words("english"))
 
 
@@ -14,5 +14,6 @@ def clean_query(q):
     q = re.sub(r"<.*?>", " ", q)
     q = re.sub(r"[^a-zA-Z\s]", " ", q)
     q = q.lower()
-    tokens = [lemmatizer.lemmatize(w) for w in q.split() if w not in stop_words]
+    tokens = q.split()
+    tokens = [stemmer.stem(w) for w in tokens if w not in stop_words]
     return tokens
