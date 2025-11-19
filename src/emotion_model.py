@@ -18,7 +18,7 @@ def load_movie_emotion_vectors(path="data/processed/movie_emotion_sentiment.csv"
 
     return movie_vectors
 
-def compute_query_emotion_vector(query: str):
+def compute_query_emotion_vector(query):
     raw = NRCLex(query.lower()).raw_emotion_scores
 
     vec = np.array(
@@ -30,4 +30,4 @@ def compute_query_emotion_vector(query: str):
     if s == 0:
         return np.zeros(len(EMOTIONS))
 
-    return vec / (np.linalg.norm(vec) + 1e-6)
+    return vec

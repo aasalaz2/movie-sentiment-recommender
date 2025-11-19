@@ -12,6 +12,12 @@ EMOTIONS = [
     "combined_disgust", "combined_surprise", "combined_trust", "combined_anticipation"
 ]
 
+# Score weights
+weight_reviews=0.1
+weight_summaries=0.4
+weight_rating_sentiment=0.15
+weight_emotion_match=0.35
+
 def load_indexes(letterboxd_path, metacritic_path):
     """Load the inverted index JSON file."""
     with open(letterboxd_path, "r", encoding="utf-8") as f:
@@ -36,6 +42,10 @@ def load_doc_lengths(path):
     """Load desired doc lengths index."""
     with open(path, "r", encoding="utf=8") as f:
         return json.load(f)
+    
+def normalize_movie_name(name):
+    return re.sub(r"[^\w\s]", "", name).lower().strip()
+
 
 def rating_sentiment(movie, sentiment_profile):
     if movie not in sentiment_profile:
@@ -62,6 +72,7 @@ def retrieve_candidates(tokens, inverted_index, total_docs):
 
         for entry in posting_list:
             movie = entry["movie_name"]
+            movie = normalize_movie_name(movie)
             tf = entry.get("count", 1)
             
             candidates[movie] += tfidf(tf, df, total_docs)
@@ -73,11 +84,7 @@ def combine_scores(
         metacritic_scores,
         rating_profile,
         emotion_profile,
-        query_emotion_vec,
-        weight_reviews=0.05,
-        weight_summaries=0.6,
-        weight_rating_sentiment=0.1,
-        weight_emotion_match=0.25):
+        query_emotion_vec):
     """Combines letterboxd reviews, metacritic movie summaries scores, and their sentiment profiles."""
     final_scores = defaultdict(float)
 
@@ -85,6 +92,8 @@ def combine_scores(
     all_movies = set(letterboxd_scores) | set(metacritic_scores) | set(emotion_profile)
 
     for movie in all_movies:
+        movie = normalize_movie_name(movie)
+        
         # Review score
         review_s = letterboxd_scores.get(movie, 0)
 
@@ -95,7 +104,7 @@ def combine_scores(
         rating_s = rating_profile.get(movie, {}).get("pos_rate", 0)
 
         # Emotion similarity
-        movie_vec = emotion_profile.get(movie.lower(), np.zeros(len(EMOTIONS)))
+        movie_vec = emotion_profile.get(movie, np.zeros(len(EMOTIONS)))
         emotion_match = cosine_similarity(movie_vec, query_emotion_vec)
 
         # Weighted combination
@@ -150,8 +159,8 @@ def process_query(query, letterboxd_path, metacritic_path):
     metacritic_scores = retrieve_candidates(tokens, metacritic_index, len(metacritic_doc_lengths))
 
     # Normalize scores
-    letterboxd_scores = normalize_scores(letterboxd_scores)
-    metacritic_scores = normalize_scores(metacritic_scores)
+    # letterboxd_scores = normalize_scores(letterboxd_scores)
+    # metacritic_scores = normalize_scores(metacritic_scores)
     ####################################################################################
 
     # Combine scores
@@ -168,23 +177,12 @@ def process_query(query, letterboxd_path, metacritic_path):
     return ranked
 
 if __name__== "__main__":
+    query = "dark somber gritty"
     letterboxd_path = "indexes/letterboxd_index.json"
     metacritic_path = "indexes/metacritic_index.json"
-    letterboxd_index, metacritic_index = load_indexes(letterboxd_path, metacritic_path)
-    tokens = clean_query("emotional sci-fi epic about a father trying to save humanity through space travel")
-    lb_scores = retrieve_candidates(tokens, letterboxd_index)
-    mc_scores = retrieve_candidates(tokens, metacritic_index)
 
-    print("LB score:", lb_scores.get("interstellar"))
-    print("MC score:", mc_scores.get("interstellar"))
+    results = process_query(query, letterboxd_path, metacritic_path)
 
-
-    # query = "dark somber gritty"
-    # letterboxd_path = "indexes/letterboxd_index.json"
-    # metacritic_path = "indexes/metacritic_index.json"
-
-    # results = process_query(query, letterboxd_path, metacritic_path)
-
-    # print(f"\nTop Results for Query: `{query}`\n")
-    # for movie, score in results[:10]:
-    #     print(f"{movie}: {score}")
+    print(f"\nTop Results for Query: `{query}`\n")
+    for movie, score in results[:10]:
+        print(f"{movie}: {score}")
