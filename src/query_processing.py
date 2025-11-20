@@ -49,33 +49,26 @@ def rating_sentiment(movie, sentiment_profile):
         return 0
     return sentiment_profile[movie]["pos_rate"]
 
-def cosine_similarity(a, b):
-    if np.linalg.norm(a) == 0 or np.linalg.norm(b) == 0:
-        return 0.0
-    return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
 
-def tfidf(tf, df, N):
-    return (1 + math.log(tf)) * math.log((N+1) / (df+1))
-
-def retrieve_candidates(tokens, inverted_index, total_docs):
+def retrieve_candidates(tokens, inverted_index, document_frequency, doc_lengths, avg_length, k1=1.5, b=0.75):
     """Retrieve candidate movies that contain one or more query tokens."""
     candidates = defaultdict(int)
+
     for token in tokens:
-        if token not in inverted_index:
-            continue
+        if token in inverted_index:
+            for entry in inverted_index[token]:
+                IDF = document_frequency.get(token, 0)
+                
+                movie = entry["movie_name"]
+                freq = entry.get("count", 1)
 
-        posting_list = inverted_index[token]
-        df = len(posting_list)
+                document_length = doc_lengths.get(movie, 0) 
 
-        for entry in posting_list:
-            movie = entry["movie_name"]
-            movie = normalize_movie_name(movie)
-            tf = entry.get("count", 1)
-            
-            candidates[movie] += tfidf(tf, df, total_docs)
+                bm25 = IDF * (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * (document_length / avg_length)))
 
-    return candidates
-
+                candidates[movie] += bm25
+    return candidates    
+    
 def combine_scores(
         letterboxd_scores,
         metacritic_scores,
@@ -151,17 +144,19 @@ def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     letterboxd_avg_len = sum(letterboxd_doc_lengths.values()) / len(letterboxd_doc_lengths)
     metacritic_avg_len = sum(metacritic_doc_lengths.values()) / len(metacritic_doc_lengths)
     
+    letterboxd_document_frequency, metacritic_document_frequency = load_indexes("indexes/letterboxd_document_frequency.json", "indexes/metacritic_document_frequency.json")
+
     tokens = clean_query(query)
     if not tokens:
         return []
     
     ####################################################################################
     # TODO: This whole area should be replaced with calls to our ranking algorithm (BM25?)
-
+    
     # Retrieve raw term-frequency matches
-    letterboxd_scores = retrieve_candidates(tokens, letterboxd_index, len(letterboxd_doc_lengths))
-    metacritic_scores = retrieve_candidates(tokens, metacritic_index, len(metacritic_doc_lengths))
-
+    letterboxd_scores = retrieve_candidates(tokens, letterboxd_index, letterboxd_document_frequency, letterboxd_doc_lengths, letterboxd_avg_len)
+    metacritic_scores = retrieve_candidates(tokens, metacritic_index, metacritic_document_frequency, metacritic_doc_lengths, metacritic_avg_len)
+    
     # Normalize scores
     # letterboxd_scores = normalize_scores(letterboxd_scores)
     # metacritic_scores = normalize_scores(metacritic_scores)
@@ -202,7 +197,7 @@ if __name__== "__main__":
     query = "dark somber gritty"
     letterboxd_path = "indexes/letterboxd_index.json"
     metacritic_path = "indexes/metacritic_index.json"
-
+        
     results = process_query(query, letterboxd_path, metacritic_path)
 
     print(f"\nTop Results for Query: `{query}`\n")
