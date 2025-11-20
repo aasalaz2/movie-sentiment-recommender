@@ -1,6 +1,5 @@
 import os
 from query_processing import process_query
-from text_cleaning import clean_query
 
 def main():
     print("\nMovie Search Engine\n")

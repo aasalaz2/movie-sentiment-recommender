@@ -1,8 +1,23 @@
 import json
+import math
 import pandas as pd
+import numpy as np
 from collections import defaultdict
-from text_cleaning import clean_query
+from utils import clean_query, normalize_movie_name
+from emotion_model import load_movie_emotion_vectors, compute_query_emotion_vector
+from semantic_model import compute_semantic_scores
 
+EMOTIONS = [
+    "combined_anger", "combined_fear", "combined_sadness", "combined_joy",
+    "combined_disgust", "combined_surprise", "combined_trust", "combined_anticipation"
+]
+
+# Score weights
+weight_reviews=0.35
+weight_summaries=0.3
+weight_rating_sentiment=0.1
+weight_emotion_match=0.15
+weight_semantic_scores=0.1
 
 def load_indexes(letterboxd_path, metacritic_path):
     """Load the inverted index JSON file."""
@@ -57,17 +72,21 @@ def retrieve_candidates(tokens, inverted_index, document_frequency, doc_lengths,
 def combine_scores(
         letterboxd_scores,
         metacritic_scores,
-        sentiment_profile,
-        weight_reviews=0.6,
-        weight_summaries=0.3,
-        weight_sentiment=0.1):
+        rating_profile,
+        emotion_profile,
+        query_emotion_vec,
+        semantic_scores,
+        candidate_movies
+    ):
     """Combines letterboxd reviews, metacritic movie summaries scores, and their sentiment profiles."""
     final_scores = defaultdict(float)
 
     # Combine all movies
-    all_movies = set(letterboxd_scores) | set(metacritic_scores) | set(sentiment_profile)
+    # all_movies = set(letterboxd_scores) | set(metacritic_scores) | set(emotion_profile) | set(semantic_scores)
 
-    for movie in all_movies:
+    for movie in candidate_movies:
+        movie = normalize_movie_name(movie)
+        
         # Review score
         review_s = letterboxd_scores.get(movie, 0)
 
@@ -75,13 +94,22 @@ def combine_scores(
         summary_s = metacritic_scores.get(movie, 0)
 
         # Rating-based sentiment score
-        sentiment_s = sentiment_profile.get(movie, {}).get("pos_rate", 0)
+        rating_s = rating_profile.get(movie, {}).get("pos_rate", 0)
+
+        # Emotion similarity
+        movie_vec = emotion_profile.get(movie, np.zeros(len(EMOTIONS)))
+        emotion_match = cosine_similarity(movie_vec, query_emotion_vec)
+
+        # Semantic score for movie
+        semantic_s = semantic_scores.get(movie, 0.0)
 
         # Weighted combination
         score = (
             weight_reviews * review_s +
             weight_summaries * summary_s +
-            weight_sentiment * sentiment_s
+            weight_rating_sentiment * rating_s +
+            weight_emotion_match * emotion_match +
+            weight_semantic_scores * semantic_s
         )
 
         final_scores[movie] = score
@@ -101,10 +129,12 @@ def normalize_scores(scores):
     max_score = max(scores.values())
     return {m: v / max_score for m, v in scores.items() if max_score > 0}
 
-def process_query(query, letterboxd_path, metacritic_path):
+def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     """Clean query, retrieve candidates, and rank."""
     letterboxd_index, metacritic_index = load_indexes(letterboxd_path, metacritic_path)
-    sentiment_profile, doc_profile = load_movie_profiles()
+    rating_profile, doc_profile = load_movie_profiles()
+    emotion_profile = load_movie_emotion_vectors()
+    query_emotion_vec = compute_query_emotion_vector(query)
 
     # Load doc lengths for leterboxd and metacritic to be used for BM25
     letterboxd_doc_lengths = load_doc_lengths("indexes/letterboxd_doc_lengths.json")
@@ -128,20 +158,43 @@ def process_query(query, letterboxd_path, metacritic_path):
     metacritic_scores = retrieve_candidates(tokens, metacritic_index, metacritic_document_frequency, metacritic_doc_lengths, metacritic_avg_len)
     
     # Normalize scores
-    letterboxd_scores = normalize_scores(letterboxd_scores)
-    metacritic_scores = normalize_scores(metacritic_scores)
-
-    # Combine scores
-    combined_scores = combine_scores(letterboxd_scores, metacritic_scores, sentiment_profile)
-
-    ranked = sorted(combined_scores.items(), key=lambda x:x[1], reverse=True)
+    # letterboxd_scores = normalize_scores(letterboxd_scores)
+    # metacritic_scores = normalize_scores(metacritic_scores)
     ####################################################################################
 
+    combined_lex = {}
+    for m, s in letterboxd_scores.items():
+        combined_lex[m] = combined_lex.get(m, 0.0) + s
+    for m, s in metacritic_scores.items():
+        combined_lex[m] = combined_lex.get(m, 0.0) + s
+
+    # Semantic scores (summary-based)
+    semantic_scores = compute_semantic_scores(query)
+
+    if combined_lex:
+        sorted_lex = sorted(combined_lex.items(), key=lambda kv: kv[1], reverse=True)
+        candidate_movies = [m for m, _ in sorted_lex[:candidate_k]]
+    else:
+        sorted_sem = sorted(semantic_scores.items(), key=lambda kv: kv[1], reverse=True)
+        candidate_movies = [m for m, _ in sorted_sem[:candidate_k]]
+
+    # Combine scores
+    combined_scores = combine_scores(
+        letterboxd_scores,
+        metacritic_scores,
+        rating_profile,
+        emotion_profile,
+        query_emotion_vec,
+        semantic_scores,
+        candidate_movies
+    )
+
+    ranked = sorted(combined_scores.items(), key=lambda x:x[1], reverse=True)
 
     return ranked
 
 if __name__== "__main__":
-    query = "dark somber revenge"
+    query = "dark somber gritty"
     letterboxd_path = "indexes/letterboxd_index.json"
     metacritic_path = "indexes/metacritic_index.json"
         
