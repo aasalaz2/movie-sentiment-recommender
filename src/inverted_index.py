@@ -2,6 +2,7 @@ import pandas as pd
 import json
 from collections import defaultdict
 import math
+from utils import normalize_movie_name
 
 # Function to build inverted inddex from processed text
 def build_inverted_index(df, text_column, movie_column, extra_columns=None):
@@ -10,6 +11,7 @@ def build_inverted_index(df, text_column, movie_column, extra_columns=None):
 
     for _, row in df.iterrows():
         movie_name = row[movie_column]
+        movie_name = normalize_movie_name(movie_name)
         text = row[text_column] if isinstance(row[text_column], str) else ""
         tokens = text.split()
 

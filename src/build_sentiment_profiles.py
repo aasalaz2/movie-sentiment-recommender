@@ -1,6 +1,7 @@
 import pandas as pd
 from nrclex import NRCLex
 import nltk
+from utils import normalize_movie_name
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
@@ -18,6 +19,10 @@ def compute_sentiment(text):
 # Load cleaned datasets
 letterboxd = pd.read_csv("data/processed/letterboxd_reviews_clean.csv")
 metacritic = pd.read_csv("data/processed/metacritic_reviews_clean.csv")
+
+# Normalize movie names
+letterboxd["movie_name"] = letterboxd["movie_name"].astype(str).apply(normalize_movie_name)
+metacritic["movie_name"] = metacritic["movie_name"].astype(str).apply(normalize_movie_name)
 
 # Compute emotion dictionary
 letterboxd["emotion_dict"] = letterboxd["review"].apply(compute_sentiment)

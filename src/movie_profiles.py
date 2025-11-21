@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 from pathlib import Path
+from utils import normalize_movie_name
 
 merged = Path("data/processed/merged_movies.csv")
 
@@ -8,7 +9,7 @@ outdir = Path("data/processed")
 outdir.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(merged)
-df["movie_name"] = df["movie_name"].astype(str).str.strip()
+df["movie_name"] = df["movie_name"].astype(str).str.strip().apply(normalize_movie_name)
 
 
 # >= 4.0 positive

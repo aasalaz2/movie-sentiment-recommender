@@ -1,17 +1,17 @@
 movie_name,n_total,n_pos,n_neu,n_neg,pos_rate,avg_rating
-(500) days of summer,8,4,3,1,0.5,0.7
 10 cloverfield lane,1,1,0,0,1.0,0.8
 10 things i hate about you,13,12,1,0,0.9230769230769231,0.9384615384615385
 12 angry men,5,5,0,0,1.0,0.9400000000000001
 13 going on 30,5,5,0,0,1.0,0.9
 191 6,3,2,1,0,0.6666666666666666,0.7666666666666667
-2001: a space odyssey,3,3,0,0,1.0,1.0
+2001 a space odyssey,3,3,0,0,1.0,1.0
 20th century women,2,2,0,0,1.0,0.95
 28 days later,1,1,0,0,1.0,0.8
 365 days,2,0,0,2,0.0,0.1
+500 days of summer,8,4,3,1,0.5,0.7
 8â½,1,0,0,1,0.0,0.1
 a clockwork orange,3,2,0,0,0.6666666666666666,0.95
-a dogâ??s will,1,1,0,0,1.0,0.9
+a dogâs will,1,1,0,0,1.0,0.9
 a few good men,1,1,0,0,1.0,0.8
 a ghost story,3,3,0,0,1.0,0.9333333333333333
 a goofy movie,1,1,0,0,1.0,1.0
@@ -25,65 +25,65 @@ a star is born,1,0,1,0,0.0,0.6
 a trip to the moon,3,3,0,0,1.0,0.9333333333333333
 about time,5,3,2,0,0.6,0.82
 ad astra,2,2,0,0,1.0,0.9
-adaptation.,2,2,0,0,1.0,0.95
+adaptation,2,2,0,0,1.0,0.95
 addams family values,1,0,0,0,0.0,0.5
 after,2,0,0,2,0.0,0.2
 after hours,4,3,0,0,0.75,0.8666666666666666
 after we collided,1,0,0,1,0.0,0.1
 after yang,3,3,0,0,1.0,0.8333333333333334
 aftersun,17,16,0,0,0.9411764705882353,0.975
-airplane!,1,0,1,0,0.0,0.7
+airplane,1,0,1,0,0.0,0.7
 alien,3,3,0,0,1.0,0.9333333333333333
 aliens,2,2,0,0,1.0,0.9
 all quiet on the western front,4,2,2,0,0.5,0.7
-all too well: the short film,5,2,0,1,0.4,0.7
+all too well the short film,5,2,0,1,0.4,0.7
 almost famous,2,2,0,0,1.0,0.9
 amadeus,1,1,0,0,1.0,1.0
 ambulance,3,1,2,0,0.3333333333333333,0.7333333333333333
 american beauty,5,4,1,0,0.8,0.86
 american history x,1,0,1,0,0.0,0.7
 american psycho,20,16,3,0,0.8,0.8052631578947368
-american psycho ii: all american girl,1,0,0,1,0.0,0.1
+american psycho ii all american girl,1,0,0,1,0.0,0.1
 ammonite,3,1,2,0,0.3333333333333333,0.6666666666666667
 amsterdam,1,0,0,1,0.0,0.3
-amã©lie,4,4,0,0,1.0,0.95
+amãlie,4,4,0,0,1.0,0.95
 an american werewolf in london,1,1,0,0,1.0,0.8
 and then we danced,1,1,0,0,1.0,0.8
 anna karenina,3,1,2,0,0.3333333333333333,0.6333333333333333
 annette,6,3,2,1,0.5,0.7166666666666667
 annihilation,3,3,0,0,1.0,0.9333333333333333
 another round,7,5,2,0,0.7142857142857143,0.8428571428571429
-ant-man,1,0,1,0,0.0,0.7
-ant-man and the wasp,1,0,1,0,0.0,0.7
-ant-man and the wasp: quantumania,10,1,3,5,0.1,0.4444444444444445
 antichrist,1,0,1,0,0.0,0.5
+antman,1,0,1,0,0.0,0.7
+antman and the wasp,1,0,1,0,0.0,0.7
+antman and the wasp quantumania,10,1,3,5,0.1,0.4444444444444445
 apocalypse now,1,1,0,0,1.0,0.9
 aquaman,3,1,1,0,0.3333333333333333,0.8
-are you lost in the world like me?,1,0,0,1,0.0,0.2
+are you lost in the world like me,1,0,0,1,0.0,0.2
 army of darkness,1,1,0,0,1.0,0.9
 army of the dead,1,0,1,0,0.0,0.6
 arrival,3,3,0,0,1.0,1.0
 artemis fowl,2,0,0,2,0.0,0.15
 arthur christmas,1,1,0,0,1.0,0.8
 as i was moving ahead occasionally i saw brief glimpses of beauty,1,1,0,0,1.0,1.0
-at eternityâ??s gate,1,0,1,0,0.0,0.7
+at eternityâs gate,1,0,1,0,0.0,0.7
 atomic blonde,1,0,1,0,0.0,0.7
 atonement,11,10,1,0,0.9090909090909091,0.9272727272727274
 avatar,5,0,4,0,0.0,0.625
-avatar: the way of water,14,8,4,2,0.5714285714285714,0.7285714285714285
-avengers: endgame,1,1,0,0,1.0,0.8
-avengers: infinity war,2,0,1,1,0.0,0.5
+avatar the way of water,14,8,4,2,0.5714285714285714,0.7285714285714285
+avengers endgame,1,1,0,0,1.0,0.8
+avengers infinity war,2,0,1,1,0.0,0.5
 baby driver,2,1,1,0,0.5,0.85
 babylon,34,22,4,6,0.6470588235294118,0.75625
 back to the future,2,2,0,0,1.0,0.9
 bacurau,1,1,0,0,1.0,0.9
 bad times at the el royale,1,1,0,0,1.0,0.8
-barb & star go to vista del mar,2,2,0,0,1.0,0.9
+barb  star go to vista del mar,2,2,0,0,1.0,0.9
 barbarian,19,15,2,0,0.7894736842105263,0.8235294117647058
 barry lyndon,2,2,0,0,1.0,1.0
 batman,2,2,0,0,1.0,0.85
+batman mask of the phantasm,1,1,0,0,1.0,0.9
 batman returns,1,1,0,0,1.0,0.8
-batman: mask of the phantasm,1,1,0,0,1.0,0.9
 battle royale,1,1,0,0,1.0,0.8
 beautiful boy,8,2,6,0,0.25,0.725
 beauty and the beast,2,2,0,0,1.0,1.0
@@ -99,13 +99,13 @@ bend it like beckham,2,0,2,0,0.0,0.7
 benedetta,3,3,0,0,1.0,0.8666666666666666
 big little lies,1,1,0,0,1.0,0.9
 bird box,1,0,1,0,0.0,0.5
-birdman or (the unexpected virtue of ignorance),2,2,0,0,1.0,1.0
-birds of prey (and the fantabulous emancipation of one harley quinn),2,2,0,0,1.0,0.9
+birdman or the unexpected virtue of ignorance,2,2,0,0,1.0,1.0
+birds of prey and the fantabulous emancipation of one harley quinn,2,2,0,0,1.0,0.9
 black adam,5,0,1,2,0.0,0.4333333333333333
-black mirror: nosedive,1,1,0,0,1.0,0.8
-black mirror: striking vipers,1,0,1,0,0.0,0.6
+black mirror nosedive,1,1,0,0,1.0,0.8
+black mirror striking vipers,1,0,1,0,0.0,0.6
 black panther,1,1,0,0,1.0,1.0
-black panther: wakanda forever,12,7,5,0,0.5833333333333334,0.75
+black panther wakanda forever,12,7,5,0,0.5833333333333334,0.75
 black swan,8,8,0,0,1.0,0.925
 black widow,20,6,10,4,0.3,0.61
 blackkklansman,3,1,1,0,0.3333333333333333,0.75
@@ -115,34 +115,34 @@ blade runner 2049,4,4,0,0,1.0,0.95
 blonde,8,0,0,8,0.0,0.2625
 blue valentine,1,1,0,0,1.0,1.0
 blue velvet,2,2,0,0,1.0,0.95
-bo burnham: inside,6,5,0,0,0.8333333333333334,0.9800000000000001
-bo burnham: make happy,1,0,0,0,0.0,0.5
+bo burnham inside,6,5,0,0,0.8333333333333334,0.9800000000000001
+bo burnham make happy,1,0,0,0,0.0,0.5
 bodies bodies bodies,17,9,7,0,0.5294117647058824,0.75625
 boiling point,2,2,0,0,1.0,0.9
 bones and all,16,16,0,0,1.0,0.90625
 boogie nights,4,4,0,0,1.0,0.9
 booksmart,3,3,0,0,1.0,0.9
+borat cultural learnings of america for make benefit glorious nation of kazakhstan,2,1,1,0,0.5,0.75
 borat subsequent moviefilm,1,0,1,0,0.0,0.7
-borat: cultural learnings of america for make benefit glorious nation of kazakhstan,2,1,1,0,0.5,0.75
 bottoms,1,1,0,0,1.0,1.0
 bound,1,1,0,0,1.0,0.8
 boys state,1,1,0,0,1.0,1.0
-bram stokerâ??s dracula,2,0,2,0,0.0,0.7
-breakfast at tiffanyâ??s,2,1,1,0,0.5,0.8
+bram stokerâs dracula,2,0,2,0,0.0,0.7
+breakfast at tiffanyâs,2,1,1,0,0.5,0.8
 breathless,2,2,0,0,1.0,0.9
 bridesmaids,1,1,0,0,1.0,1.0
-bridget jonesâ??s diary,4,1,3,0,0.25,0.675
+bridget jonesâs diary,4,1,3,0,0.25,0.675
 brokeback mountain,12,9,1,0,0.75,0.9
 bros,1,0,0,0,0.0,0.5
-buffalo â??66,1,1,0,0,1.0,0.9
+buffalo â66,1,1,0,0,1.0,0.9
 bullet train,11,5,5,0,0.45454545454545453,0.7
 burn after reading,1,0,0,0,0.0,0.5
 burning,2,2,0,0,1.0,0.9
-but i'm a cheerleader,2,2,0,0,1.0,0.9
-but iâ??m a cheerleader,5,4,1,0,0.8,0.82
+but im a cheerleader,2,2,0,0,1.0,0.9
+but iâm a cheerleader,5,4,1,0,0.8,0.82
 call me by your name,5,4,1,0,0.8,0.8800000000000001
 candyman,4,1,2,0,0.25,0.7
-captain america: the winter soldier,2,2,0,0,1.0,0.9
+captain america the winter soldier,2,2,0,0,1.0,0.9
 captain marvel,1,0,0,1,0.0,0.4
 carol,6,6,0,0,1.0,0.9833333333333334
 carrie,5,5,0,0,1.0,0.8800000000000001
@@ -161,7 +161,7 @@ chicago,1,1,0,0,1.0,1.0
 chicken little,1,0,0,1,0.0,0.2
 children of men,2,2,0,0,1.0,0.95
 chinatown,1,1,0,0,1.0,0.9
-chip â??n dale: rescue rangers,3,2,1,0,0.6666666666666666,0.7333333333333333
+chip ân dale rescue rangers,3,2,1,0,0.6666666666666666,0.7333333333333333
 choose or die,1,0,0,1,0.0,0.3
 christopher robin,1,0,1,0,0.0,0.7
 chungking express,6,4,1,0,0.6666666666666666,0.8400000000000001
@@ -173,7 +173,7 @@ closer,3,2,1,0,0.6666666666666666,0.7666666666666667
 cloudy with a chance of meatballs,1,1,0,0,1.0,0.8
 clue,5,4,0,0,0.8,0.9
 clueless,5,5,0,0,1.0,0.9400000000000001
-clã©o from 5 to  6,1,1,0,0,1.0,0.8
+clão from 5 to  6,1,1,0,0,1.0,0.8
 cocaine bear,11,3,5,0,0.2727272727272727,0.7625
 coco,2,2,0,0,1.0,0.8
 coda,8,3,4,0,0.375,0.7428571428571429
@@ -186,7 +186,7 @@ corpse bride,2,1,1,0,0.5,0.8
 cowboy bebop,1,0,0,0,0.0,0.5
 crash,2,2,0,0,1.0,0.9
 crazy rich asians,1,1,0,0,1.0,0.9
-"crazy, stupid, love.",3,2,1,0,0.6666666666666666,0.7666666666666667
+crazy stupid love,3,2,1,0,0.6666666666666666,0.7666666666666667
 creed,3,3,0,0,1.0,0.9
 creed iii,1,1,0,0,1.0,0.8
 creep,1,1,0,0,1.0,0.9
@@ -195,19 +195,19 @@ crimes of the future,2,1,1,0,0.5,0.65
 cruel intentions,1,0,1,0,0.0,0.6
 cruella,4,1,2,0,0.25,0.7333333333333333
 crush,4,4,0,0,1.0,0.9
-cry-baby,1,1,0,0,1.0,0.8
+crybaby,1,1,0,0,1.0,0.8
 cuties,1,0,0,1,0.0,0.1
-câ??mon câ??mon,4,4,0,0,1.0,0.9
-d.e.b.s.,2,2,0,0,1.0,0.9
-dahmer â?? monster: the jeffrey dahmer story,2,0,2,0,0.0,0.6
+câmon câmon,4,4,0,0,1.0,0.9
+dahmer â monster the jeffrey dahmer story,2,0,2,0,0.0,0.6
 dazed and confused,2,2,0,0,1.0,0.9
 dead poets society,11,11,0,0,1.0,0.9
 dear evan hansen,2,0,0,2,0.0,0.25
 death on the nile,4,0,4,0,0.0,0.55
 death proof,1,1,0,0,1.0,1.0
+debs,2,2,0,0,1.0,0.9
 decision to leave,3,3,0,0,1.0,0.9
 deep water,2,0,0,2,0.0,0.4
-diary of a wimpy kid: rodrick rules,2,2,0,0,1.0,0.95
+diary of a wimpy kid rodrick rules,2,2,0,0,1.0,0.95
 die hard,2,2,0,0,1.0,0.95
 dirty dancing,2,1,0,0,0.5,1.0
 disenchanted,3,0,1,1,0.0,0.55
@@ -218,12 +218,12 @@ doctor sleep,1,0,0,1,0.0,0.4
 doctor strange in the multiverse of madness,16,6,5,4,0.375,0.6466666666666667
 dog day afternoon,5,5,0,0,1.0,0.9800000000000001
 dogtooth,1,0,1,0,0.0,0.7
-don't look up,1,1,0,0,1.0,0.8
-don't worry darling,5,2,2,1,0.4,0.64
 donnie darko,8,7,1,0,0.875,0.8625
-donâ??t look up,12,3,2,5,0.25,0.5
-donâ??t worry darling,16,2,2,9,0.125,0.4384615384615385
-dr. strangelove or: how i learned to stop worrying and love the bomb,2,2,0,0,1.0,0.85
+dont look up,1,1,0,0,1.0,0.8
+dont worry darling,5,2,2,1,0.4,0.64
+donât look up,12,3,2,5,0.25,0.5
+donât worry darling,16,2,2,9,0.125,0.4384615384615385
+dr strangelove or how i learned to stop worrying and love the bomb,2,2,0,0,1.0,0.85
 drive,4,3,1,0,0.75,0.825
 drive my car,5,5,0,0,1.0,0.8800000000000001
 dune,25,17,6,0,0.68,0.808695652173913
@@ -232,12 +232,12 @@ easy a,3,3,0,0,1.0,0.8666666666666666
 edge of tomorrow,1,1,0,0,1.0,1.0
 edward scissorhands,4,4,0,0,1.0,0.9
 eighth grade,2,2,0,0,1.0,0.9
-el camino: a breaking bad movie,1,1,0,0,1.0,0.9
+el camino a breaking bad movie,1,1,0,0,1.0,0.9
 election,1,1,0,0,1.0,0.8
 elf,2,0,2,0,0.0,0.7
 elvis,15,6,7,2,0.4,0.7066666666666667
 emily the criminal,1,0,1,0,0.0,0.6
-emma.,10,2,7,0,0.2,0.7333333333333333
+emma,10,2,7,0,0.2,0.7333333333333333
 empire records,1,1,0,0,1.0,0.9
 encanto,16,11,5,0,0.6875,0.76875
 enchanted,2,1,1,0,0.5,0.85
@@ -250,35 +250,35 @@ eo,1,1,0,0,1.0,0.8
 eraserhead,7,5,1,0,0.7142857142857143,0.8666666666666666
 eternal sunshine of the spotless mind,6,5,1,0,0.8333333333333334,0.9
 eternals,9,3,4,1,0.3333333333333333,0.675
-euphoria: f*ck anyone whoâ??s not a sea blob,2,1,0,0,0.5,1.0
-euphoria: trouble donâ??t last always,2,2,0,0,1.0,0.95
-eurovision song contest: the story of fire saga,1,0,0,1,0.0,0.4
+euphoria fck anyone whoâs not a sea blob,2,1,0,0,0.5,1.0
+euphoria trouble donât last always,2,2,0,0,1.0,0.95
+eurovision song contest the story of fire saga,1,0,0,1,0.0,0.4
 event horizon,1,1,0,0,1.0,0.8
 everything everywhere all at once,25,23,2,0,0.92,0.9119999999999999
 evil dead ii,5,5,0,0,1.0,0.9199999999999999
 ex machina,7,6,1,0,0.8571428571428571,0.8428571428571429
-"extremely wicked, shockingly evil and vile",1,0,0,0,0.0,0.5
+extremely wicked shockingly evil and vile,1,0,0,0,0.0,0.5
 eyes wide shut,6,4,1,0,0.6666666666666666,0.8800000000000001
 f9,2,2,0,0,1.0,0.9
 fall,3,0,2,1,0.0,0.4333333333333333
 fallen angels,5,5,0,0,1.0,0.9800000000000001
 falling for christmas,1,0,0,0,0.0,0.5
 fantastic beasts and where to find them,1,0,1,0,0.0,0.6
-fantastic beasts: the secrets of dumbledore,1,0,0,1,0.0,0.4
-fantastic mr. fox,8,8,0,0,1.0,0.925
+fantastic beasts the secrets of dumbledore,1,0,0,1,0.0,0.4
+fantastic mr fox,8,8,0,0,1.0,0.925
 fargo,4,4,0,0,1.0,0.975
 fear and loathing in las vegas,1,1,0,0,1.0,1.0
-fear street: 1666,3,2,1,0,0.6666666666666666,0.9
-fear street: 19 6  8,2,1,1,0,0.5,0.8
-fear street: 1994,5,1,3,1,0.2,0.6599999999999999
-ferris buellerâ??s day off,3,2,1,0,0.6666666666666666,0.8666666666666666
+fear street 1666,3,2,1,0,0.6666666666666666,0.9
+fear street 19 6  8,2,1,1,0,0.5,0.8
+fear street 1994,5,1,3,1,0.2,0.6599999999999999
+ferris buellerâs day off,3,2,1,0,0.6666666666666666,0.8666666666666666
 fifty shades of grey,1,0,0,1,0.0,0.3
 fight club,10,9,1,0,0.9,0.9099999999999999
 finding nemo,1,1,0,0,1.0,0.9
 fire of love,3,1,2,0,0.3333333333333333,0.7333333333333333
 first reformed,5,5,0,0,1.0,0.8800000000000001
 five feet apart,1,0,0,0,0.0,0.5
-folklore: the long pond studio sessions,1,0,0,0,0.0,0.5
+folklore the long pond studio sessions,1,0,0,0,0.0,0.5
 ford v ferrari,1,1,0,0,1.0,0.8
 four weddings and a funeral,2,1,1,0,0.5,0.75
 framing britney spears,1,0,0,0,0.0,0.5
@@ -295,21 +295,21 @@ from up on poppy hill,1,1,0,0,1.0,0.9
 full metal jacket,2,2,0,0,1.0,0.95
 funny games,3,3,0,0,1.0,0.8666666666666666
 fyre,2,0,1,0,0.0,0.6
-g.i. jane,1,0,1,0,0.0,0.6
 game night,2,1,0,0,0.5,1.0
 gaslight,1,0,0,0,0.0,0.5
 get out,4,4,0,0,1.0,0.85
 ghost world,3,1,2,0,0.3333333333333333,0.6666666666666667
 ghostbusters,2,2,0,0,1.0,1.0
-ghostbusters: afterlife,3,0,0,2,0.0,0.3
-"girl, interrupted",8,7,1,0,0.875,0.9125
-glass onion: a knives out mystery,23,17,5,0,0.7391304347826086,0.8
-godzilla vs. kong,3,0,2,1,0.0,0.5
-godâ??s own country,3,3,0,0,1.0,0.8333333333333334
+ghostbusters afterlife,3,0,0,2,0.0,0.3
+gi jane,1,0,1,0,0.0,0.6
+girl interrupted,8,7,1,0,0.875,0.9125
+glass onion a knives out mystery,23,17,5,0,0.7391304347826086,0.8
+godzilla vs kong,3,0,2,1,0.0,0.5
+godâs own country,3,3,0,0,1.0,0.8333333333333334
 gone girl,16,14,0,0,0.875,0.9642857142857142
 good time,2,1,1,0,0.5,0.85
 good will hunting,4,4,0,0,1.0,0.95
-good will hunting (199 6  ),1,1,0,0,1.0,1.0
+good will hunting 199 6,1,1,0,0,1.0,1.0
 goodfellas,4,4,0,0,1.0,0.95
 grave of the fireflies,1,1,0,0,1.0,0.9
 green book,2,0,0,2,0.0,0.35
@@ -319,10 +319,10 @@ groundhog day,1,1,0,0,1.0,1.0
 grown ups,1,1,0,0,1.0,1.0
 grown ups 2,1,0,0,1,0.0,0.1
 guardians of the galaxy,1,1,0,0,1.0,0.8
-guillermo del toro's pinocchio,1,0,1,0,0.0,0.7
-guillermo del toroâ??s pinocchio,10,8,2,0,0.8,0.82
+guillermo del toros pinocchio,1,0,1,0,0.0,0.7
+guillermo del toroâs pinocchio,10,8,2,0,0.8,0.82
 halloween,18,12,6,0,0.6666666666666666,0.8333333333333334
-halloween (19 6  8),1,1,0,0,1.0,0.9
+halloween 19 6  8,1,1,0,0,1.0,0.9
 halloween ends,3,0,1,1,0.0,0.35
 halloween kills,4,0,2,1,0.0,0.4666666666666667
 hamilton,2,1,0,0,0.5,0.9
@@ -331,13 +331,13 @@ happy death day,2,1,1,0,0.5,0.7
 happy feet,1,0,1,0,0.0,0.6
 happy together,2,2,0,0,1.0,0.9
 harold and maude,1,0,1,0,0.0,0.7
-harry potter 20th anniversary: return to hogwarts,4,1,1,0,0.25,0.85
+harry potter 20th anniversary return to hogwarts,4,1,1,0,0.25,0.85
 harry potter and the chamber of secrets,3,2,1,0,0.6666666666666666,0.7666666666666667
-harry potter and the deathly hallows: part 2,2,2,0,0,1.0,0.9
+harry potter and the deathly hallows part 2,2,2,0,0,1.0,0.9
 harry potter and the goblet of fire,3,2,1,0,0.6666666666666666,0.8333333333333334
-harry potter and the half-blood prince,3,1,2,0,0.3333333333333333,0.7666666666666667
+harry potter and the halfblood prince,3,1,2,0,0.3333333333333333,0.7666666666666667
 harry potter and the order of the phoenix,2,2,0,0,1.0,1.0
-harry potter and the philosopherâ??s stone,2,2,0,0,1.0,0.9
+harry potter and the philosopherâs stone,2,2,0,0,1.0,0.9
 harry potter and the prisoner of azkaban,7,7,0,0,1.0,0.9428571428571428
 hawkeye,1,0,1,0,0.0,0.5
 heat,3,2,0,0,0.6666666666666666,1.0
@@ -346,18 +346,18 @@ hellraiser,2,2,0,0,1.0,0.9
 her,11,8,1,1,0.7272727272727273,0.8300000000000001
 hercules,2,2,0,0,1.0,0.9
 hereditary,6,6,0,0,1.0,0.8666666666666666
-heâ??s all that,6,0,1,4,0.0,0.26
+heâs all that,6,0,1,4,0.0,0.26
 hidden figures,1,1,0,0,1.0,1.0
 high fidelity,1,1,0,0,1.0,0.8
 high life,1,0,1,0,0.0,0.6
 high school musical,1,1,0,0,1.0,1.0
 high school musical 2,2,2,0,0,1.0,0.8
-high school musical 3: senior year,1,0,1,0,0.0,0.6
+high school musical 3 senior year,1,0,1,0,0.0,0.6
 hocus pocus,3,1,2,0,0.3333333333333333,0.7333333333333333
 hocus pocus 2,1,0,1,0,0.0,0.6
 holes,1,1,0,0,1.0,1.0
 home alone,3,2,1,0,0.6666666666666666,0.8333333333333334
-homecoming: a film by beyoncã©,1,1,0,0,1.0,0.8
+homecoming a film by beyoncã,1,1,0,0,1.0,0.8
 honey boy,1,1,0,0,1.0,0.9
 host,1,0,1,0,0.0,0.7
 hostel,1,1,0,0,1.0,0.8
@@ -367,16 +367,16 @@ house of gucci,7,2,3,2,0.2857142857142857,0.6285714285714286
 how the grinch stole christmas,1,0,1,0,0.0,0.7
 how to lose a guy in 10 days,5,2,2,1,0.4,0.7
 how to train your dragon,1,1,0,0,1.0,1.0
-how to train your dragon: the hidden world,1,1,0,0,1.0,0.8
-howl's moving castle,1,1,0,0,1.0,0.9
-howlâ??s moving castle,8,7,0,0,0.875,0.9
+how to train your dragon the hidden world,1,1,0,0,1.0,0.8
+howls moving castle,1,1,0,0,1.0,0.9
+howlâs moving castle,8,7,0,0,0.875,0.9
 hubie halloween,2,1,0,1,0.5,0.65
 hustle,1,0,1,0,0.0,0.7
 hustlers,4,4,0,0,1.0,0.85
 i care a lot,2,0,1,0,0.0,0.7
 i know what you did last summer,1,0,1,0,0.0,0.7
-i'm thinking of ending things,1,0,0,1,0.0,0.1
-"i, tonya",3,2,1,0,0.6666666666666666,0.8
+i tonya,3,2,1,0,0.6666666666666666,0.8
+im thinking of ending things,1,0,0,1,0.0,0.1
 in the heights,7,2,3,1,0.2857142857142857,0.6333333333333333
 in the mood for love,5,4,1,0,0.8,0.86
 in time,1,0,0,1,0.0,0.4
@@ -399,47 +399,47 @@ isle of dogs,2,0,2,0,0.0,0.7
 it,1,1,0,0,1.0,0.8
 it chapter two,4,1,2,1,0.25,0.575
 it follows,2,2,0,0,1.0,1.0
-itâ??s a wonderful life,3,3,0,0,1.0,0.9666666666666666
-iâ??m thinking of ending things,5,3,1,0,0.6,0.85
+itâs a wonderful life,3,3,0,0,1.0,0.9666666666666666
+iâm thinking of ending things,5,3,1,0,0.6,0.85
 jackass forever,4,3,1,0,0.75,0.875
 jaws,4,2,1,0,0.5,0.9
-jeen-yuhs: a kanye trilogy,1,1,0,0,1.0,0.9
-jenniferâ??s body,12,10,1,0,0.8333333333333334,0.8909090909090909
+jeenyuhs a kanye trilogy,1,1,0,0,1.0,0.9
+jenniferâs body,12,10,1,0,0.8333333333333334,0.8909090909090909
 jerry maguire,1,0,1,0,0.0,0.7
 john tucker must die,1,1,0,0,1.0,0.8
 john wick,2,2,0,0,1.0,0.8
-john wick: chapter 3 - parabellum,1,1,0,0,1.0,0.8
+john wick chapter 3  parabellum,1,1,0,0,1.0,0.8
 jojo rabbit,4,4,0,0,1.0,0.825
 joker,7,1,2,4,0.14285714285714285,0.5
 judas and the black messiah,4,4,0,0,1.0,0.85
 jujutsu kaisen 0,2,2,0,0,1.0,1.0
 jungle cruise,2,0,2,0,0.0,0.65
 juno,7,6,1,0,0.8571428571428571,0.8571428571428571
-juno (200 6  ),1,1,0,0,1.0,0.8
+juno 200 6,1,1,0,0,1.0,0.8
 jurassic park,3,3,0,0,1.0,0.9
 jurassic world,1,0,0,1,0.0,0.4
 jurassic world dominion,6,0,1,5,0.0,0.36666666666666664
 justice league,2,0,1,1,0.0,0.45
 kajillionaire,1,1,0,0,1.0,1.0
-kikiâ??s delivery service,3,2,1,0,0.6666666666666666,0.8
-kill bill: vol. 1,5,5,0,0,1.0,0.9800000000000001
-kill bill: vol. 2,1,1,0,0,1.0,1.0
+kikiâs delivery service,3,2,1,0,0.6666666666666666,0.8
+kill bill vol 1,5,5,0,0,1.0,0.9800000000000001
+kill bill vol 2,1,1,0,0,1.0,1.0
 kill your darlings,1,0,1,0,0.0,0.7
 kimi,3,2,1,0,0.6666666666666666,0.7666666666666667
 king richard,2,0,2,0,0.0,0.6
-kingsman: the golden circle,1,0,1,0,0.0,0.6
-kingsman: the secret service,1,1,0,0,1.0,0.8
+kingsman the golden circle,1,0,1,0,0.0,0.6
+kingsman the secret service,1,1,0,0,1.0,0.8
 klaus,3,2,0,0,0.6666666666666666,0.8
 knives out,14,12,0,0,0.8571428571428571,0.8583333333333334
 knock at the cabin,5,1,3,1,0.2,0.62
-kong: skull island,1,1,0,0,1.0,0.8
+kong skull island,1,1,0,0,1.0,0.8
 kung fu panda,1,1,0,0,1.0,0.9
-l.a. confidential,1,1,0,0,1.0,1.0
-la jetã©e,1,1,0,0,1.0,1.0
+la confidential,1,1,0,0,1.0,1.0
+la jetãe,1,1,0,0,1.0,1.0
 la la land,8,8,0,0,1.0,0.9875
 labyrinth,2,1,1,0,0.5,0.75
 lady bird,8,8,0,0,1.0,0.9875
-lady chatterleyâ??s lover,1,1,0,0,1.0,0.8
+lady chatterleyâs lover,1,1,0,0,1.0,0.8
 lamb,12,0,8,2,0.0,0.5599999999999999
 lars and the real girl,2,2,0,0,1.0,0.8
 last night in soho,12,2,1,7,0.16666666666666666,0.45
@@ -455,25 +455,25 @@ look both ways,2,0,2,0,0.0,0.55
 lost highway,2,2,0,0,1.0,0.8
 lost in translation,2,1,1,0,0.5,0.85
 love,1,0,1,0,0.0,0.6
-love & other drugs,1,0,1,0,0.0,0.7
+love  other drugs,1,0,1,0,0.0,0.7
 love actually,4,2,2,0,0.5,0.775
 love hard,2,0,0,2,0.0,0.4
-"love, rosie",1,1,0,0,1.0,0.8
-"love, simon",1,0,1,0,0.0,0.7
+love rosie,1,1,0,0,1.0,0.8
+love simon,1,0,1,0,0.0,0.7
 luca,11,6,4,0,0.5454545454545454,0.8400000000000001
-lux ã?terna,1,1,0,0,1.0,0.8
-"lyle, lyle, crocodile",2,0,0,2,0.0,0.3
-lã©on: the professional,2,2,0,0,1.0,0.9
+lux ãterna,1,1,0,0,1.0,0.8
+lyle lyle crocodile,2,0,0,2,0.0,0.3
+lãon the professional,2,2,0,0,1.0,0.9
 m3gan,14,3,8,0,0.21428571428571427,0.7
 ma,2,1,1,0,0.5,0.75
-ma raineyâ??s black bottom,1,0,1,0,0.0,0.7
-mad max: fury road,3,3,0,0,1.0,1.0
+ma raineyâs black bottom,1,0,1,0,0.0,0.7
+mad max fury road,3,3,0,0,1.0,1.0
 magnolia,1,1,0,0,1.0,0.8
 mainstream,1,1,0,0,1.0,0.8
-malcolm & marie,5,0,1,2,0.0,0.4666666666666667
+malcolm  marie,5,0,1,2,0.0,0.4666666666666667
 malignant,6,3,2,0,0.5,0.76
-mamma mia!,8,5,3,0,0.625,0.825
-mamma mia! here we go again,3,2,0,0,0.6666666666666666,1.0
+mamma mia,8,5,3,0,0.625,0.825
+mamma mia here we go again,3,2,0,0,0.6666666666666666,1.0
 manchester by the sea,1,1,0,0,1.0,0.9
 mank,2,0,1,0,0.0,0.6
 marcel the shell with shoes on,9,9,0,0,1.0,0.9222222222222222
@@ -497,14 +497,14 @@ midnight mass,2,2,0,0,1.0,0.8
 midsommar,12,8,2,0,0.6666666666666666,0.8
 minari,6,6,0,0,1.0,0.9166666666666666
 minions,1,0,0,1,0.0,0.2
-minions: the rise of gru,9,2,4,2,0.2222222222222222,0.6625
+minions the rise of gru,9,2,4,2,0.2222222222222222,0.6625
 miss americana,1,1,0,0,1.0,1.0
 miss congeniality,1,0,1,0,0.0,0.7
 missing,4,2,2,0,0.5,0.75
-mission: impossible - ghost protocol,1,1,0,0,1.0,0.8
+mission impossible  ghost protocol,1,1,0,0,1.0,0.8
 mommy,3,3,0,0,1.0,1.0
 moneyball,1,0,0,0,0.0,0.5
-"monsters, inc.",1,1,0,0,1.0,0.9
+monsters inc,1,1,0,0,1.0,0.9
 monty python and the holy grail,1,1,0,0,1.0,1.0
 moon knight,4,2,0,0,0.5,1.0
 moonlight,3,3,0,0,1.0,0.9
@@ -512,16 +512,16 @@ moonrise kingdom,3,2,1,0,0.6666666666666666,0.8666666666666666
 moonstruck,1,1,0,0,1.0,1.0
 morbius,8,1,0,4,0.125,0.3
 mortal kombat,1,0,1,0,0.0,0.5
-mother!,6,2,3,1,0.3333333333333333,0.6
-moulin rouge!,4,3,0,0,0.75,0.9666666666666666
+mother,6,2,3,1,0.3333333333333333,0.6
+moulin rouge,4,3,0,0,0.75,0.9666666666666666
 moxie,3,1,2,0,0.3333333333333333,0.7
-mr. & mrs. smith,1,1,0,0,1.0,0.8
-ms. marvel,1,0,1,0,0.0,0.7
+mr  mrs smith,1,1,0,0,1.0,0.8
+ms marvel,1,0,1,0,0.0,0.7
 mulan,6,0,0,6,0.0,0.26666666666666666
 mulholland drive,5,5,0,0,1.0,0.9800000000000001
 murder on the orient express,1,0,1,0,0.0,0.6
 music,2,0,0,2,0.0,0.1
-my best friendâ??s wedding,1,0,1,0,0.0,0.7
+my best friendâs wedding,1,0,1,0,0.0,0.7
 my life as a zucchini,2,1,1,0,0.5,0.85
 my neighbor totoro,4,4,0,0,1.0,0.925
 my octopus teacher,2,2,0,0,1.0,0.9
@@ -545,34 +545,34 @@ normal people,8,7,0,0,0.875,0.9571428571428571
 nosferatu,1,1,0,0,1.0,0.9
 not okay,9,3,5,1,0.3333333333333333,0.7
 notting hill,6,4,2,0,0.6666666666666666,0.75
-obi-wan kenobi,1,0,0,1,0.0,0.2
+obiwan kenobi,1,0,0,1,0.0,0.2
 ocean waves,1,0,1,0,0.0,0.6
-oceanâ??s eight,1,0,0,1,0.0,0.4
-oceanâ??s eleven,3,3,0,0,1.0,0.9333333333333333
+oceanâs eight,1,0,0,1,0.0,0.4
+oceanâs eleven,3,3,0,0,1.0,0.9333333333333333
 okja,1,1,0,0,1.0,0.9
 old,7,2,0,4,0.2857142857142857,0.4833333333333333
 oldboy,2,2,0,0,1.0,1.0
-once upon a timeâ?¦ in hollywood,6,3,0,2,0.5,0.7
-one flew over the cuckooâ??s nest,1,1,0,0,1.0,0.9
-one night in miamiâ?¦,1,0,0,0,0.0,0.5
+once upon a timeâ in hollywood,6,3,0,2,0.5,0.7
+one flew over the cuckooâs nest,1,1,0,0,1.0,0.9
+one night in miamiâ,1,0,0,0,0.0,0.5
 onward,1,1,0,0,1.0,0.8
 orphan,2,0,2,0,0.0,0.7
-orphan: first kill,3,0,3,0,0.0,0.6333333333333333
+orphan first kill,3,0,3,0,0.0,0.6333333333333333
 over the garden wall,2,2,0,0,1.0,0.9
 pacific rim,1,0,0,1,0.0,0.4
 paddington,1,1,0,0,1.0,0.8
 paddington 2,5,5,0,0,1.0,0.9400000000000001
 palm springs,3,3,0,0,1.0,0.8
 panic room,2,2,0,0,1.0,0.9
-panâ??s labyrinth,3,3,0,0,1.0,0.9
+panâs labyrinth,3,3,0,0,1.0,0.9
 paprika,2,2,0,0,1.0,0.85
 parallel mothers,1,0,1,0,0.0,0.7
 parasite,12,10,1,0,0.8333333333333334,0.9272727272727274
-"paris, texas",1,1,0,0,1.0,1.0
+paris texas,1,1,0,0,1.0,1.0
 passengers,2,0,0,2,0.0,0.3
 paterson,2,2,0,0,1.0,0.9
 pearl,16,8,6,0,0.5,0.7857142857142857
-percy jackson & the olympians: the lightning thief,2,0,2,0,0.0,0.55
+percy jackson  the olympians the lightning thief,2,0,2,0,0.0,0.55
 perfect blue,6,5,0,0,0.8333333333333334,0.9400000000000001
 persona,3,3,0,0,1.0,0.9333333333333333
 persuasion,5,0,1,4,0.0,0.33999999999999997
@@ -585,7 +585,7 @@ pinocchio,12,0,0,12,0.0,0.225
 pitch perfect,2,1,1,0,0.5,0.8
 point break,4,4,0,0,1.0,0.95
 ponyo,5,3,2,0,0.6,0.8
-popstar: never stop never stopping,3,3,0,0,1.0,1.0
+popstar never stop never stopping,3,3,0,0,1.0,1.0
 porco rosso,2,2,0,0,1.0,0.9
 portrait of a lady on fire,20,19,1,0,0.95,0.9550000000000001
 possession,10,8,2,0,0.8,0.8400000000000001
@@ -594,7 +594,7 @@ predator,1,1,0,0,1.0,0.9
 pretty woman,1,0,1,0,0.0,0.6
 prey,2,1,1,0,0.5,0.75
 pride,1,1,0,0,1.0,0.9
-pride & prejudice,15,15,0,0,1.0,0.9800000000000001
+pride  prejudice,15,15,0,0,1.0,0.9800000000000001
 pride and prejudice,1,1,0,0,1.0,0.9
 primal fear,1,1,0,0,1.0,0.8
 princess mononoke,3,3,0,0,1.0,0.9333333333333333
@@ -603,13 +603,13 @@ project x,2,0,0,0,0.0,0.5
 promising young woman,1,0,1,0,0.0,0.7
 psycho,8,8,0,0,1.0,0.85
 pulp fiction,5,3,2,0,0.6,0.78
-punch-drunk love,3,2,1,0,0.6666666666666666,0.9
+punchdrunk love,3,2,1,0,0.6666666666666666,0.9
 purple hearts,3,0,0,3,0.0,0.2
-puss in boots: the last wish,18,16,1,1,0.8888888888888888,0.8833333333333334
+puss in boots the last wish,18,16,1,1,0.8888888888888888,0.8833333333333334
 raiders of the lost ark,1,1,0,0,1.0,0.9
 ratatoing,1,0,0,1,0.0,0.3
 ratatouille,8,8,0,0,1.0,0.95
-ratatouille: the tiktok musical,1,0,0,0,0.0,0.5
+ratatouille the tiktok musical,1,0,0,0,0.0,0.5
 raw,6,5,1,0,0.8333333333333334,0.8166666666666667
 raya and the last dragon,1,0,1,0,0.0,0.6
 ready or not,10,6,4,0,0.6,0.76
@@ -623,7 +623,7 @@ remember me,1,0,1,0,0.0,0.6
 requiem for a dream,8,8,0,0,1.0,0.9
 reservoir dogs,6,6,0,0,1.0,0.9166666666666666
 return of the jedi,3,2,1,0,0.6666666666666666,0.8333333333333334
-roald dahlâ??s matilda the musical,3,1,2,0,0.3333333333333333,0.8
+roald dahlâs matilda the musical,3,1,2,0,0.3333333333333333,0.8
 robots,1,0,0,0,0.0,0.5
 rocketman,2,0,2,0,0.0,0.65
 rocky,1,1,0,0,1.0,0.8
@@ -631,13 +631,13 @@ roma,1,1,0,0,1.0,0.9
 romeo  juliet,3,3,0,0,1.0,0.9
 room,4,4,0,0,1.0,0.9
 rope,2,2,0,0,1.0,0.8
-rosemaryâ??s baby,2,2,0,0,1.0,0.95
+rosemaryâs baby,2,2,0,0,1.0,0.95
 rrr,7,7,0,0,1.0,0.9428571428571428
 ruby sparks,1,1,0,0,1.0,0.9
 run,1,0,1,0,0.0,0.7
 rushmore,3,1,2,0,0.3333333333333333,0.8
 saint maud,2,1,1,0,0.5,0.75
-"salã², or the 120 days of sodom",3,1,1,0,0.3333333333333333,0.7
+salã² or the 120 days of sodom,3,1,1,0,0.3333333333333333,0.7
 save ralph,1,0,1,0,0.0,0.7
 saw,2,1,1,0,0.5,0.85
 saw ii,2,1,1,0,0.5,0.75
@@ -645,13 +645,13 @@ saw iv,1,0,1,0,0.0,0.6
 scarface,3,3,0,0,1.0,0.8
 scenes from a marriage,1,0,0,0,0.0,0.5
 school of rock,2,2,0,0,1.0,0.95
-scoob!,1,0,0,1,0.0,0.3
-scooby-doo,3,2,1,0,0.6666666666666666,0.8333333333333334
-scooby-doo 2: monsters unleashed,2,2,0,0,1.0,1.0
-scott pilgrim vs. the world,8,8,0,0,1.0,0.9875
+scoob,1,0,0,1,0.0,0.3
+scoobydoo,3,2,1,0,0.6666666666666666,0.8333333333333334
+scoobydoo 2 monsters unleashed,2,2,0,0,1.0,1.0
+scott pilgrim vs the world,8,8,0,0,1.0,0.9875
 scream,42,34,6,0,0.8095238095238095,0.835
 scream 2,3,3,0,0,1.0,0.8666666666666666
-scream 2 (199 6  ),1,0,1,0,0.0,0.6
+scream 2 199 6,1,0,1,0,0.0,0.6
 scream 3,3,0,3,0,0.0,0.6333333333333333
 scream vi,10,7,2,0,0.7,0.8
 se 6  en,7,7,0,0,1.0,0.9428571428571428
@@ -661,14 +661,14 @@ senior year,2,0,0,2,0.0,0.4
 set it up,2,0,2,0,0.0,0.65
 seven samurai,1,1,0,0,1.0,1.0
 shame,1,1,0,0,1.0,0.8
-shang-chi and the legend of the ten rings,12,3,9,0,0.25,0.675
+shangchi and the legend of the ten rings,12,3,9,0,0.25,0.675
 shark tale,2,1,0,1,0.5,0.7
 shaun of the dead,2,2,0,0,1.0,0.95
 shaun the sheep movie,1,1,0,0,1.0,1.0
-shazam!,1,1,0,0,1.0,1.0
-she-hulk: attorney at law,2,0,0,1,0.0,0.2
-sheâ??s all that,1,0,0,1,0.0,0.4
-sheâ??s the man,1,0,1,0,0.0,0.5
+shazam,1,1,0,0,1.0,1.0
+shehulk attorney at law,2,0,0,1,0.0,0.2
+sheâs all that,1,0,0,1,0.0,0.4
+sheâs the man,1,0,1,0,0.0,0.5
 shiva baby,12,10,2,0,0.8333333333333334,0.8833333333333334
 shoplifters,1,1,0,0,1.0,0.9
 short term 12,1,1,0,0,1.0,1.0
@@ -680,7 +680,7 @@ sicario,1,1,0,0,1.0,1.0
 signs,1,1,0,0,1.0,0.8
 sing 2,3,2,1,0,0.6666666666666666,0.9
 sing street,1,1,0,0,1.0,0.9
-singinâ?? in the rain,2,2,0,0,1.0,0.85
+singinâ in the rain,2,2,0,0,1.0,0.85
 skinamarink,3,1,2,0,0.3333333333333333,0.7333333333333333
 skyfall,1,1,0,0,1.0,1.0
 smile,20,0,16,2,0.0,0.5888888888888889
@@ -693,18 +693,18 @@ sorry to bother you,3,3,0,0,1.0,0.8333333333333334
 soul,4,3,1,0,0.75,0.8
 sound of metal,4,3,0,0,0.75,0.9
 space jam,1,1,0,0,1.0,1.0
-space jam: a new legacy,1,0,0,1,0.0,0.2
+space jam a new legacy,1,0,0,1,0.0,0.2
 speed racer,1,1,0,0,1.0,0.8
 spencer,12,10,2,0,0.8333333333333334,0.875
-spider-man,4,3,1,0,0.75,0.775
-spider-man 2,3,3,0,0,1.0,0.9333333333333333
-spider-man 3,2,2,0,0,1.0,0.95
-spider-man: far from home,1,0,1,0,0.0,0.6
-spider-man: homecoming,1,0,0,1,0.0,0.4
-spider-man: into the spider-verse,9,9,0,0,1.0,0.9444444444444444
-spider-man: no way home,10,6,1,2,0.6,0.8
 spiderhead,1,0,1,0,0.0,0.5
-spiral: from the book of saw,1,0,0,0,0.0,0.5
+spiderman,4,3,1,0,0.75,0.775
+spiderman 2,3,3,0,0,1.0,0.9333333333333333
+spiderman 3,2,2,0,0,1.0,0.95
+spiderman far from home,1,0,1,0,0.0,0.6
+spiderman homecoming,1,0,0,1,0.0,0.4
+spiderman into the spiderverse,9,9,0,0,1.0,0.9444444444444444
+spiderman no way home,10,6,1,2,0.6,0.8
+spiral from the book of saw,1,0,0,0,0.0,0.5
 spirited away,5,5,0,0,1.0,0.9800000000000001
 split,2,1,0,1,0.5,0.65
 spree,9,5,4,0,0.5555555555555556,0.788888888888889
@@ -712,11 +712,11 @@ spring breakers,1,1,0,0,1.0,0.8
 squid game,10,5,4,0,0.5,0.7666666666666667
 stand by me,4,4,0,0,1.0,0.9
 star wars,4,4,0,0,1.0,0.95
-star wars: episode i - the phantom menace,1,0,0,1,0.0,0.4
-star wars: episode ii -â attack of the clones,3,0,2,1,0.0,0.5333333333333333
-star wars: episode iii -â revenge of the sith,4,3,1,0,0.75,0.8
-star wars: the last jedi,4,4,0,0,1.0,0.95
-star wars: the rise of skywalker,4,0,1,3,0.0,0.35
+star wars episode i  the phantom menace,1,0,0,1,0.0,0.4
+star wars episode ii â attack of the clones,3,0,2,1,0.0,0.5333333333333333
+star wars episode iii â revenge of the sith,4,3,1,0,0.75,0.8
+star wars the last jedi,4,4,0,0,1.0,0.95
+star wars the rise of skywalker,4,0,1,3,0.0,0.35
 stardust,1,1,0,0,1.0,0.9
 stoker,2,1,0,0,0.5,0.9
 stop making sense,1,1,0,0,1.0,1.0
@@ -725,11 +725,11 @@ submarine,2,2,0,0,1.0,0.8
 suicide squad,1,0,0,1,0.0,0.2
 sunset boulevard,1,0,0,0,0.0,0.5
 superbad,6,4,2,0,0.6666666666666666,0.8666666666666666
-surfâ??s up,1,1,0,0,1.0,0.9
+surfâs up,1,1,0,0,1.0,0.9
 suspiria,14,10,2,0,0.7142857142857143,0.8666666666666666
-suspiria (19 6   6  ),1,1,0,0,1.0,1.0
+suspiria 19 6   6,1,1,0,0,1.0,1.0
 swiss army man,3,2,1,0,0.6666666666666666,0.8333333333333334
-"synecdoche, new york",1,1,0,0,1.0,1.0
+synecdoche new york,1,1,0,0,1.0,1.0
 tall girl,3,0,0,2,0.0,0.15
 tangled,3,2,1,0,0.6666666666666666,0.9
 taxi driver,7,6,1,0,0.8571428571428571,0.9
@@ -739,32 +739,32 @@ texas chainsaw massacre,2,0,0,2,0.0,0.25
 the adam project,3,0,2,1,0.0,0.4666666666666667
 the addams family,2,0,2,0,0.0,0.7
 the adventures of sharkboy and lavagirl,1,1,0,0,1.0,1.0
-the amazing spider-man,3,1,2,0,0.3333333333333333,0.6333333333333333
+the amazing spiderman,3,1,2,0,0.3333333333333333,0.6333333333333333
 the apartment,1,1,0,0,1.0,1.0
 the babadook,1,0,0,0,0.0,0.5
 the bad guys,2,1,1,0,0.5,0.8
 the banshees of inisherin,20,17,1,2,0.85,0.8150000000000001
 the batman,22,18,3,0,0.8181818181818182,0.8380952380952381
-the beatles: get back,1,0,0,0,0.0,0.5
+the beatles get back,1,0,0,0,0.0,0.5
 the big lebowski,2,2,0,0,1.0,0.85
 the big short,1,0,1,0,0.0,0.6
 the big sick,1,1,0,0,1.0,0.8
 the black phone,9,5,3,0,0.5555555555555556,0.7
 the blair witch project,5,2,2,1,0.4,0.6799999999999999
 the bling ring,3,1,2,0,0.3333333333333333,0.7333333333333333
-the bobâ??s burgers movie,3,3,0,0,1.0,0.8
-the boss baby: family business,1,0,0,1,0.0,0.3
+the bobâs burgers movie,3,3,0,0,1.0,0.8
+the boss baby family business,1,0,0,1,0.0,0.3
 the breakfast club,4,3,0,1,0.75,0.775
 the bubble,2,0,0,2,0.0,0.4
 the bye bye man,1,0,0,0,0.0,0.5
-the cabinet of dr. caligari,1,1,0,0,1.0,0.8
+the cabinet of dr caligari,1,1,0,0,1.0,0.8
 the call of the wild,1,0,0,1,0.0,0.2
 the cat in the hat,1,0,1,0,0.0,0.6
 the cat returns,1,1,0,0,1.0,1.0
-the childrenâ??s hour,1,1,0,0,1.0,0.8
-"the chronicles of narnia: the lion, the witch and the wardrobe",1,1,0,0,1.0,0.9
+the childrenâs hour,1,1,0,0,1.0,0.8
+the chronicles of narnia the lion the witch and the wardrobe,1,1,0,0,1.0,0.9
 the conjuring,1,0,1,0,0.0,0.7
-the conjuring: the devil made me do it,2,0,2,0,0.0,0.55
+the conjuring the devil made me do it,2,0,2,0,0.0,0.55
 the craft,1,1,0,0,1.0,1.0
 the curious case of benjamin button,1,0,1,0,0.0,0.6
 the darjeeling limited,3,1,2,0,0.3333333333333333,0.7333333333333333
@@ -787,16 +787,16 @@ the farewell,3,3,0,0,1.0,0.9
 the father,3,3,0,0,1.0,0.8333333333333334
 the favourite,1,1,0,0,1.0,1.0
 the florida project,1,1,0,0,1.0,1.0
-the florida project (201 6  ),1,1,0,0,1.0,0.9
+the florida project 201 6,1,1,0,0,1.0,0.9
 the fly,4,4,0,0,1.0,0.8
 the french dispatch,15,10,5,0,0.6666666666666666,0.8066666666666666
 the game,3,2,1,0,0.6666666666666666,0.7666666666666667
 the gentlemen,1,1,0,0,1.0,0.9
 the girl with the dragon tattoo,1,1,0,0,1.0,0.9
 the godfather,7,5,0,0,0.7142857142857143,0.96
-the godfather: part ii,4,3,0,0,0.75,1.0
+the godfather part ii,4,3,0,0,0.75,1.0
 the good nurse,1,1,0,0,1.0,0.8
-"the good, the bad and the ugly",2,2,0,0,1.0,1.0
+the good the bad and the ugly,2,2,0,0,1.0,1.0
 the graduate,2,2,0,0,1.0,0.9
 the grand budapest hotel,8,8,0,0,1.0,0.9625
 the gray man,5,0,1,3,0.0,0.375
@@ -815,11 +815,11 @@ the help,1,0,1,0,0.0,0.7
 the holiday,4,2,2,0,0.5,0.775
 the house,3,1,1,0,0.3333333333333333,0.75
 the house that jack built,4,2,1,0,0.5,0.8666666666666666
-the human centipede (first sequence),1,0,0,1,0.0,0.3
+the human centipede first sequence,1,0,0,1,0.0,0.3
 the hunchback of notre dame,1,1,0,0,1.0,0.8
 the hunger games,4,2,2,0,0.5,0.7
-the hunger games: catching fire,5,5,0,0,1.0,0.8800000000000001
-the hunger games: mockingjay - part 2,2,0,2,0,0.0,0.6
+the hunger games catching fire,5,5,0,0,1.0,0.8800000000000001
+the hunger games mockingjay  part 2,2,0,2,0,0.0,0.6
 the hunt,2,0,2,0,0.0,0.7
 the invisible man,4,2,1,0,0.5,0.7333333333333333
 the invitation,4,2,0,0,0.5,0.9
@@ -843,9 +843,9 @@ the lion king 1â½,1,0,1,0,0.0,0.7
 the little things,2,0,0,1,0.0,0.3
 the lobster,6,6,0,0,1.0,0.8833333333333334
 the long goodbye,1,1,0,0,1.0,0.8
-the lord of the rings: the fellowship of the ring,5,5,0,0,1.0,0.96
-the lord of the rings: the return of the king,1,1,0,0,1.0,1.0
-the lord of the rings: the two towers,2,2,0,0,1.0,1.0
+the lord of the rings the fellowship of the ring,5,5,0,0,1.0,0.96
+the lord of the rings the return of the king,1,1,0,0,1.0,1.0
+the lord of the rings the two towers,2,2,0,0,1.0,1.0
 the lost boys,2,1,1,0,0.5,0.85
 the lost city,6,0,6,0,0.0,0.6333333333333333
 the lost daughter,5,1,4,0,0.2,0.64
@@ -856,7 +856,7 @@ the matrix,5,5,0,0,1.0,0.9400000000000001
 the matrix resurrections,5,5,0,0,1.0,0.86
 the matrix revolutions,1,1,0,0,1.0,1.0
 the menu,28,15,7,2,0.5357142857142857,0.7583333333333333
-the mitchells vs. the machines,8,8,0,0,1.0,0.85
+the mitchells vs the machines,8,8,0,0,1.0,0.85
 the mummy,2,0,2,0,0.0,0.6
 the muppet christmas carol,1,1,0,0,1.0,0.9
 the muppets,2,2,0,0,1.0,0.9
@@ -880,15 +880,15 @@ the prestige,2,2,0,0,1.0,0.85
 the prince of egypt,1,1,0,0,1.0,1.0
 the princess bride,3,3,0,0,1.0,0.8666666666666666
 the princess diaries,2,1,1,0,0.5,0.7
-the princess diaries 2: royal engagement,1,1,0,0,1.0,1.0
+the princess diaries 2 royal engagement,1,1,0,0,1.0,1.0
 the prom,2,0,0,2,0.0,0.25
 the proposal,2,2,0,0,1.0,0.9
-the queenâ??s gambit,5,2,1,0,0.4,0.8666666666666666
+the queenâs gambit,5,2,1,0,0.4,0.8666666666666666
 the red shoes,1,1,0,0,1.0,1.0
 the revenant,1,1,0,0,1.0,0.8
 the ring,1,1,0,0,1.0,0.8
 the rocky horror picture show,6,6,0,0,1.0,0.8666666666666666
-the rocky horror picture show (19 6  5),2,2,0,0,1.0,0.9
+the rocky horror picture show 19 6  5,2,2,0,0,1.0,0.9
 the royal tenenbaums,7,7,0,0,1.0,0.9285714285714286
 the sea beast,1,0,1,0,0.0,0.7
 the shape of water,5,4,1,0,0.8,0.8400000000000001
@@ -896,7 +896,7 @@ the shawshank redemption,2,2,0,0,1.0,1.0
 the shining,3,2,1,0,0.6666666666666666,0.9
 the silence of the lambs,4,4,0,0,1.0,0.975
 the simpsons movie,1,1,0,0,1.0,0.8
-the simpsons movie (200 6  ),1,1,0,0,1.0,0.8
+the simpsons movie 200 6,1,1,0,0,1.0,0.8
 the skin i live in,1,1,0,0,1.0,0.8
 the social dilemma,3,1,2,0,0.3333333333333333,0.7
 the social network,14,12,0,0,0.8571428571428571,0.975
@@ -906,19 +906,19 @@ the square,2,2,0,0,1.0,0.8
 the squid and the whale,1,1,0,0,1.0,1.0
 the strange thing about the johnsons,2,0,1,0,0.0,0.6
 the suicide squad,9,5,3,0,0.5555555555555556,0.8375
-the talented mr. ripley,4,4,0,0,1.0,0.85
+the talented mr ripley,4,4,0,0,1.0,0.85
 the texas chain saw massacre,5,5,0,0,1.0,0.8800000000000001
-the texas chain saw massacre (19 6  4),1,1,0,0,1.0,1.0
+the texas chain saw massacre 19 6  4,1,1,0,0,1.0,1.0
 the thing,8,8,0,0,1.0,0.975
 the tinder swindler,3,0,3,0,0.0,0.6333333333333333
 the tragedy of macbeth,3,2,0,0,0.6666666666666666,0.9
 the trial of the chicago  6,2,0,1,1,0.0,0.55
 the truman show,8,7,1,0,0.875,0.8625
 the turning,1,0,0,1,0.0,0.2
-the twilight saga: breaking dawn - part 1,1,0,1,0,0.0,0.7
-the twilight saga: breaking dawn - part 2,2,1,0,1,0.5,0.7
-the twilight saga: eclipse,3,1,0,2,0.3333333333333333,0.5333333333333333
-the twilight saga: new moon,8,0,2,5,0.0,0.37142857142857144
+the twilight saga breaking dawn  part 1,1,0,1,0,0.0,0.7
+the twilight saga breaking dawn  part 2,2,1,0,1,0.5,0.7
+the twilight saga eclipse,3,1,0,2,0.3333333333333333,0.5333333333333333
+the twilight saga new moon,8,0,2,5,0.0,0.37142857142857144
 the two popes,2,0,2,0,0.0,0.65
 the unbearable weight of massive talent,6,1,4,1,0.16666666666666666,0.5666666666666667
 the virgin suicides,7,6,0,0,0.8571428571428571,0.8833333333333334
@@ -929,35 +929,35 @@ the wizard of oz,2,2,0,0,1.0,0.9
 the wolf of wall street,4,4,0,0,1.0,0.925
 the woman in the window,2,0,0,2,0.0,0.35
 the wonder,2,1,1,0,0.5,0.75
-the worldâ??s end,1,1,0,0,1.0,0.9
+the worldâs end,1,1,0,0,1.0,0.9
 the worst person in the world,14,11,1,0,0.7857142857142857,0.9333333333333333
 the young girls of rochefort,1,1,0,0,1.0,0.8
-thelma & louise,2,2,0,0,1.0,0.95
+thelma  louise,2,2,0,0,1.0,0.95
 there will be blood,4,3,0,1,0.75,0.775
 they live,1,0,1,0,0.0,0.7
-they/them,1,0,0,1,0.0,0.3
+theythem,1,0,0,1,0.0,0.3
 thirteen,6,6,0,0,1.0,0.8
 this is the end,3,1,2,0,0.3333333333333333,0.6666666666666667
 thor,1,0,1,0,0.0,0.6
-thor: love and thunder,15,1,5,7,0.06666666666666667,0.45384615384615384
-thor: ragnarok,4,3,1,0,0.75,0.9
+thor love and thunder,15,1,5,7,0.06666666666666667,0.45384615384615384
+thor ragnarok,4,3,1,0,0.75,0.9
 thoroughbreds,4,4,0,0,1.0,0.9
-"three billboards outside ebbing, missouri",1,0,1,0,0.0,0.7
-three colors: blue,1,1,0,0,1.0,1.0
+three billboards outside ebbing missouri,1,0,1,0,0.0,0.7
+three colors blue,1,1,0,0,1.0,1.0
 three thousand years of longing,2,2,0,0,1.0,0.8
 through my window,1,0,0,1,0.0,0.1
 thunder road,2,2,0,0,1.0,1.0
-"tick, tick...boom!",2,2,0,0,1.0,0.9
-"tick, tickâ?¦boom!",11,5,5,1,0.45454545454545453,0.6909090909090909
-"tiger king: murder, mayhem and madness",1,1,0,0,1.0,1.0
+tick tickboom,2,2,0,0,1.0,0.9
+tick tickâboom,11,5,5,1,0.45454545454545453,0.6909090909090909
+tiger king murder mayhem and madness,1,1,0,0,1.0,1.0
 titane,10,10,0,0,1.0,0.9400000000000001
 titanic,6,5,1,0,0.8333333333333334,0.9
-to all the boys iâ??ve loved before,1,0,1,0,0.0,0.7
-to all the boys: always and forever,1,0,1,0,0.0,0.7
+to all the boys always and forever,1,0,1,0,0.0,0.7
+to all the boys iâve loved before,1,0,1,0,0.0,0.7
 tokyo godfathers,1,1,0,0,1.0,0.9
 tomboy,1,1,0,0,1.0,0.9
 top gun,10,0,9,0,0.0,0.611111111111111
-top gun: maverick,18,17,0,1,0.9444444444444444,0.8277777777777778
+top gun maverick,18,17,0,1,0.9444444444444444,0.8277777777777778
 toy story,1,1,0,0,1.0,0.8
 toy story 2,1,1,0,0,1.0,1.0
 toy story 3,1,1,0,0,1.0,0.8
@@ -969,9 +969,9 @@ troy,1,0,1,0,0.0,0.5
 turning red,18,11,5,1,0.6111111111111112,0.7823529411764706
 twilight,12,6,3,3,0.5,0.6833333333333333
 twin peaks,1,0,1,0,0.0,0.5
-twin peaks: fire walk with me,1,1,0,0,1.0,0.9
-twin peaks: the return,1,1,0,0,1.0,1.0
-tãr,16,15,0,0,0.9375,0.9199999999999999
+twin peaks fire walk with me,1,1,0,0,1.0,0.9
+twin peaks the return,1,1,0,0,1.0,1.0
+tãr,16,15,0,0,0.9375,0.9199999999999999
 un chien andalou,3,1,1,0,0.3333333333333333,0.75
 uncharted,4,0,1,3,0.0,0.45
 uncut gems,9,8,0,0,0.8888888888888888,0.8875
@@ -986,26 +986,26 @@ velvet buzzsaw,1,0,1,0,0.0,0.5
 velvet goldmine,1,1,0,0,1.0,0.9
 vengeance,1,0,1,0,0.0,0.6
 venom,6,0,2,4,0.0,0.5
-venom: let there be carnage,4,2,2,0,0.5,0.75
+venom let there be carnage,4,2,2,0,0.5,0.75
 vertigo,1,1,0,0,1.0,1.0
 vice,2,0,0,2,0.0,0.4
 videodrome,3,2,1,0,0.6666666666666666,0.8666666666666666
 violent night,1,0,1,0,0.0,0.7
 vivarium,1,0,1,0,0.0,0.5
 volver,1,1,0,0,1.0,0.8
-wallâ·e,1,1,0,0,1.0,0.9
+wallâe,1,1,0,0,1.0,0.9
 wandavision,4,2,1,1,0.5,0.7
 water lilies,1,0,1,0,0.0,0.7
 waves,1,0,1,0,0.0,0.7
 we need to talk about kevin,3,2,1,0,0.6666666666666666,0.7333333333333333
-weird: the al yankovic story,4,2,1,0,0.5,0.8
-wendell & wild,3,0,2,0,0.0,0.7
+weird the al yankovic story,4,2,1,0,0.5,0.8
+wendell  wild,3,0,2,0,0.0,0.7
 werewolf by night,3,1,1,0,0.3333333333333333,0.75
 west side story,15,12,1,0,0.8,0.8846153846153847
-weâ??re all going to the worldâ??s fair,2,2,0,0,1.0,0.85
-what did jack do?,1,0,0,0,0.0,0.5
+weâre all going to the worldâs fair,2,2,0,0,1.0,0.85
+what did jack do,1,0,0,0,0.0,0.5
 what we do in the shadows,7,7,0,0,1.0,0.9285714285714286
-when harry met sallyâ?¦,11,8,0,0,0.7272727272727273,0.925
+when harry met sallyâ,11,8,0,0,0.7272727272727273,0.925
 when marnie was there,1,1,0,0,1.0,0.8
 where the crawdads sing,7,0,5,2,0.0,0.5714285714285714
 whiplash,18,17,0,0,0.9444444444444444,0.9705882352941175
@@ -1017,14 +1017,14 @@ women on the verge of a nervous breakdown,1,0,0,0,0.0,0.5
 women talking,6,5,1,0,0.8333333333333334,0.8166666666666667
 wonder woman 1984,5,0,2,2,0.0,0.45
 x,44,24,16,2,0.5454545454545454,0.7523809523809524
-x-men: first class,1,1,0,0,1.0,0.8
-y tu mamã¡ tambiã©n,1,0,1,0,0.0,0.7
-"yes, god, yes",1,1,0,0,1.0,0.8
+xmen first class,1,1,0,0,1.0,0.8
+y tu mamã tambiãn,1,0,1,0,0.0,0.7
+yes god yes,1,1,0,0,1.0,0.8
 yesterday,2,0,1,0,0.0,0.7
 you people,1,0,1,0,0.0,0.5
 you were never really here,1,1,0,0,1.0,0.9
-your name.,2,1,0,0,0.5,1.0
-zack snyderâ??s justice league,1,0,1,0,0.0,0.7
+your name,2,1,0,0,0.5,1.0
+zack snyderâs justice league,1,0,1,0,0.0,0.7
 zodiac,6,6,0,0,1.0,0.9166666666666666
 zola,3,1,2,0,0.3333333333333333,0.7
 zoolander,4,3,1,0,0.75,0.85

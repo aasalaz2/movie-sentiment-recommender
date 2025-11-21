@@ -1,4 +1,5 @@
 import re
+import numpy as np
 import pandas as pd
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
@@ -20,3 +21,8 @@ def clean_query(q):
 
 def normalize_movie_name(name):
     return re.sub(r"[^\w\s]", "", name).lower().strip()
+
+def cosine_similarity(a, b):
+    if np.linalg.norm(a) == 0 or np.linalg.norm(b) == 0:
+        return 0.0
+    return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))

@@ -1,9 +1,8 @@
 import json
-import math
 import pandas as pd
 import numpy as np
 from collections import defaultdict
-from utils import clean_query, normalize_movie_name
+from utils import clean_query, normalize_movie_name, cosine_similarity
 from emotion_model import load_movie_emotion_vectors, compute_query_emotion_vector
 from semantic_model import compute_semantic_scores
 
@@ -13,8 +12,8 @@ EMOTIONS = [
 ]
 
 # Score weights
-weight_reviews=0.35
-weight_summaries=0.3
+weight_reviews=0.3
+weight_summaries=0.35
 weight_rating_sentiment=0.1
 weight_emotion_match=0.15
 weight_semantic_scores=0.1
@@ -49,7 +48,6 @@ def rating_sentiment(movie, sentiment_profile):
         return 0
     return sentiment_profile[movie]["pos_rate"]
 
-
 def retrieve_candidates(tokens, inverted_index, document_frequency, doc_lengths, avg_length, k1=1.5, b=0.75):
     """Retrieve candidate movies that contain one or more query tokens."""
     candidates = defaultdict(int)
@@ -59,7 +57,7 @@ def retrieve_candidates(tokens, inverted_index, document_frequency, doc_lengths,
             for entry in inverted_index[token]:
                 IDF = document_frequency.get(token, 0)
                 
-                movie = entry["movie_name"]
+                movie = normalize_movie_name(entry["movie_name"])
                 freq = entry.get("count", 1)
 
                 document_length = doc_lengths.get(movie, 0) 
@@ -102,6 +100,11 @@ def combine_scores(
 
         # Semantic score for movie
         semantic_s = semantic_scores.get(movie, 0.0)
+
+        lex_strength = review_s + summary_s
+        if lex_strength < 0.01:
+            semantic_s *= 0.3
+            emotion_match *= 0.5
 
         # Weighted combination
         score = (
