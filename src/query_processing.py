@@ -2,7 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 from collections import defaultdict
-from utils import clean_query, normalize_movie_name, cosine_similarity
+from utils import clean_query, normalize_movie_name, cosine_similarity, cosine
 from emotion_model import load_movie_emotion_vectors, compute_query_emotion_vector
 from semantic_model import compute_semantic_scores
 
@@ -12,11 +12,11 @@ EMOTIONS = [
 ]
 
 # Score weights
-weight_reviews=0.3
-weight_summaries=0.35
-weight_rating_sentiment=0.1
-weight_emotion_match=0.15
-weight_semantic_scores=0.1
+weight_reviews=0.2
+weight_summaries=0.25
+weight_rating_sentiment=0.15
+weight_emotion_match=0.2
+weight_semantic_scores=0.2
 
 def load_indexes(letterboxd_path, metacritic_path):
     """Load the inverted index JSON file."""
@@ -42,6 +42,54 @@ def load_doc_lengths(path):
     """Load desired doc lengths index."""
     with open(path, "r", encoding="utf=8") as f:
         return json.load(f)
+    
+def is_invalid_emotion_vector(vec):
+    """Returns True if the movie's emotion vector is invalid / misleading."""
+    vec = np.array(vec)
+
+    # Case 1: All zeros
+    if np.all(vec == 0):
+        return True
+    
+    # Case 2: Only one non-zero dimension
+    nonzero = np.count_nonzero(vec > 0.05)
+    if nonzero <= 1:
+        return True
+    
+    # Case 3: One emotion dominating unrealistically
+    if vec.max() > 0.9:
+        return True
+    
+    # Case 4: Very low total emotion
+    if vec.sum() < 0.1:
+        return True
+    
+    return False
+
+def cosine(a, b):
+    denom = (np.linalg.norm(a) * np.linalg.norm(b)) + 1e-9
+    return float(np.dot(a, b) / denom)
+
+def filter_candidates(candidate_movies, emotion_profile, query_emotion_vec,
+                    emotion_threshold=0.12):
+    """Filters candidates list."""
+    # Emotion Filtering
+    emotion_filtered = []
+    for movie in candidate_movies:
+        movie = normalize_movie_name(movie)
+        movie_vec = emotion_profile.get(movie, np.zeros_like(query_emotion_vec))
+
+        if is_invalid_emotion_vector(movie_vec):
+            continue
+
+        sim = cosine(movie_vec, query_emotion_vec)
+        if sim >= emotion_threshold:
+            emotion_filtered.append(movie)
+
+    if not emotion_filtered:
+        emotion_filtered = candidate_movies
+    
+    return emotion_filtered
 
 def rating_sentiment(movie, sentiment_profile):
     if movie not in sentiment_profile:
@@ -78,6 +126,8 @@ def combine_scores(
     ):
     """Combines letterboxd reviews, metacritic movie summaries scores, and their sentiment profiles."""
     final_scores = defaultdict(float)
+    max_review = max(letterboxd_scores.values()) if letterboxd_scores else 1
+    max_summary = max(metacritic_scores.values()) if metacritic_scores else 1
 
     # Combine all movies
     # all_movies = set(letterboxd_scores) | set(metacritic_scores) | set(emotion_profile) | set(semantic_scores)
@@ -85,11 +135,11 @@ def combine_scores(
     for movie in candidate_movies:
         movie = normalize_movie_name(movie)
         
-        # Review score
-        review_s = letterboxd_scores.get(movie, 0)
+        # Review score normalized
+        review_s = letterboxd_scores.get(movie, 0) / max_review
 
-        # Summary score
-        summary_s = metacritic_scores.get(movie, 0)
+        # Summary score normalized
+        summary_s = metacritic_scores.get(movie, 0) / max_summary
 
         # Rating-based sentiment score
         rating_s = rating_profile.get(movie, {}).get("pos_rate", 0)
@@ -97,6 +147,8 @@ def combine_scores(
         # Emotion similarity
         movie_vec = emotion_profile.get(movie, np.zeros(len(EMOTIONS)))
         emotion_match = cosine_similarity(movie_vec, query_emotion_vec)
+        if emotion_match < 0.08:
+            continue
 
         # Semantic score for movie
         semantic_s = semantic_scores.get(movie, 0.0)
@@ -153,17 +205,9 @@ def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     if not tokens:
         return []
     
-    ####################################################################################
-    # TODO: This whole area should be replaced with calls to our ranking algorithm (BM25?)
-    
     # Retrieve raw term-frequency matches
     letterboxd_scores = retrieve_candidates(tokens, letterboxd_index, letterboxd_document_frequency, letterboxd_doc_lengths, letterboxd_avg_len)
     metacritic_scores = retrieve_candidates(tokens, metacritic_index, metacritic_document_frequency, metacritic_doc_lengths, metacritic_avg_len)
-    
-    # Normalize scores
-    # letterboxd_scores = normalize_scores(letterboxd_scores)
-    # metacritic_scores = normalize_scores(metacritic_scores)
-    ####################################################################################
 
     combined_lex = {}
     for m, s in letterboxd_scores.items():
@@ -174,12 +218,20 @@ def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     # Semantic scores (summary-based)
     semantic_scores = compute_semantic_scores(query)
 
-    if combined_lex:
-        sorted_lex = sorted(combined_lex.items(), key=lambda kv: kv[1], reverse=True)
-        candidate_movies = [m for m, _ in sorted_lex[:candidate_k]]
-    else:
-        sorted_sem = sorted(semantic_scores.items(), key=lambda kv: kv[1], reverse=True)
-        candidate_movies = [m for m, _ in sorted_sem[:candidate_k]]
+    top_lex = sorted(combined_lex.items(), key=lambda x: x[1], reverse=True)[:200]
+    top_sem = sorted(semantic_scores.items(), key=lambda x: x[1], reverse=True)[:200]
+
+    candidate_movies = list(
+        { normalize_movie_name(m) for m, _ in top_lex } |
+        { normalize_movie_name(m) for m, _ in top_sem }
+    )
+
+    candidate_movies = filter_candidates(
+        candidate_movies,
+        emotion_profile,
+        query_emotion_vec
+    )
+
 
     # Combine scores
     combined_scores = combine_scores(

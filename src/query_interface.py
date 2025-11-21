@@ -34,7 +34,7 @@ def main():
 
         print("\n" + "-" * 60 + "\n")
         print("Top Results:\n")
-        for i, (movie, score) in enumerate(results[:10], start=1):
+        for i, (movie, score) in enumerate(results[:5], start=1):
             print(f"{i:2d}. {movie:<40}  Score: {score:.4f}")
 
         print("\n" + "-" * 60 + "\n")
