@@ -14,7 +14,12 @@ This project combines:
 This recommender uses the public **Movie Reviews Dataset: 10k+ Scraped Data** from Kaggle, available here:
 https://www.kaggle.com/datasets/joyshil0599/movie-reviews-dataset-10k-scraped-data/data.
 
-This is the only dataset required for the data pipeline to run successfully.
+If needed, download the dataset and place the CSV files into:
+```bash
+data/raw
+```
+
+This is the only dataset required for the data pipeline to run successfully
 
 ## Setup and Usage
 
