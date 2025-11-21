@@ -11,6 +11,7 @@ _semantic_loaded = False
 def build_semantic_index(
         in_path="data/processed/metacritic_reviews_clean.csv",
         out_path="data/processed/movie_semantic_embeddings.npz"):
+    """Builds a semantic index of the given path."""
     print(f"Loading {in_path}...")
     df = pd.read_csv(in_path)
 
@@ -25,6 +26,8 @@ def build_semantic_index(
     print(f"Found {len(grouped)} movies for embeddings.")
 
     model = SentenceTransformer("all-MiniLM-L6-v2")
+    # model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+
 
     print("Encoding movie documents...")
     embeddings = model.encode(
@@ -52,6 +55,7 @@ def load_semantic_index(path="data/processed/movie_semantic_embeddings.npz"):
     data = np.load(path, allow_pickle=True)
     _semantic_movie_names = data["movie_names"]
     _semantic_embeddings = data["embeddings"]
+    # _semantic_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
     _semantic_model = SentenceTransformer("all-MiniLM-L6-v2")
     _semantic_loaded = True
 

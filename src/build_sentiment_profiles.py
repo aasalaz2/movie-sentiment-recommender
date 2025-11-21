@@ -10,6 +10,7 @@ nltk.download('wordnet')
 EMOTIONS = ["anger", "fear", "sadness", "joy", "disgust", "surprise", "trust", "anticipation"]
 
 def compute_sentiment(text):
+    """Computes an emotion vector for the given text."""
     if not isinstance(text, str) or len(text.strip()) == 0:
         return {emotion: 0 for emotion in EMOTIONS}
     

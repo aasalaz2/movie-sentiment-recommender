@@ -27,6 +27,7 @@ def load_movie_emotion_vectors(path="data/processed/movie_emotion_sentiment.csv"
             row["combined_anticipation"]
         ], dtype=float)
 
+        # Normalize emotion sentiment
         norm = np.linalg.norm(vec)
         if norm > 0:
             vec = vec / norm
@@ -38,6 +39,7 @@ def load_movie_emotion_vectors(path="data/processed/movie_emotion_sentiment.csv"
     return movie_vectors
 
 def compute_query_emotion_vector(query):
+    """Compute an emotion vector for a query."""
     raw = NRCLex(query.lower()).raw_emotion_scores
 
     vec = np.array(
