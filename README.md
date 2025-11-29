@@ -21,6 +21,14 @@ data/raw
 
 This is the only dataset required for the data pipeline to run successfully
 
+## Files
+
+- `run_data_pipeline.py`  
+  Runs the full data pipeline end-to-end: executes the overview and preprocessing notebooks, then calls the `src/` scripts to clean the raw data, merge datasets, build sentiment/emotion profiles, and create the lexical and semantic indexes used by the recommender.
+
+- `run_movie_recommender.py`  
+  Lightweight wrapper that launches the interactive CLI by calling `src/query_interface.py` with the current Python interpreter.
+
 ## Setup and Usage
 
 Follow these steps to set up the environment, run the data pipeline, and start the movie recommender.
