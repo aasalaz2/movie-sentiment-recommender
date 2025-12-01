@@ -1,5 +1,6 @@
 import os
 from query_processing import process_query
+from ollama_integration import generate_text, build_prompt
 
 def main():
     print("\nMovie Search Engine\n")
@@ -31,12 +32,16 @@ def main():
         if not results:
             print("No results found.\n")
             continue
-
+            
+        prompt_input = build_prompt(query, results)
+        output = generate_text(prompt_input)
         print("\n" + "-" * 60 + "\n")
+        '''
         print("Top Results:\n")
         for i, (movie, score) in enumerate(results[:10], start=1):
             print(f"{i:2d}. {movie:<40}  Score: {score:.4f}")
-
+        '''
+        print(output)
         print("\n" + "-" * 60 + "\n")
 
 if __name__ == "__main__":

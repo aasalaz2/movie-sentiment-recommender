@@ -53,6 +53,10 @@ source movie_env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+Download the Llama3 model.
+```bash
+ollama pull llama3
+```
 
 ### 4. Run the Data Pipeline
 This builds all cleaned datasets, sentiment profiles, indexes, and semantic embeddings.
