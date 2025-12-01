@@ -53,6 +53,10 @@ source movie_env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+Download textblob's corpa.
+```bash
+python -m textblob.download_corpora
+```
 Download the Llama3 model.
 ```bash
 ollama pull llama3
