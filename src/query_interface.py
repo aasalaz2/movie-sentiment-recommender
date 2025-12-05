@@ -30,9 +30,10 @@ def main():
                 print("\nNo movies found with that prefix\n")
             else:
                 print("\n" + "-" * 60 + "\n")
-                print("Movies:\n")
+                print("Movies:")
                 for i, movie in enumerate(title_results, start=1):
                     print(f"{i:2d}. {movie:<40}")
+                print("\n" + "-" * 60 + "\n")
             continue
 
 

@@ -173,6 +173,7 @@ def normalize_scores(scores):
     return {m: v / max_score for m, v in scores.items() if max_score > 0}
 
 def process_title_query(query):
+    query = query.lower()
     sentiment_profiles, doc_profiles = load_movie_profiles()
     movie_list = sentiment_profiles.keys()
     return_list = [movie for movie in movie_list if movie.startswith(query)]
