@@ -172,6 +172,12 @@ def normalize_scores(scores):
     max_score = max(scores.values())
     return {m: v / max_score for m, v in scores.items() if max_score > 0}
 
+def process_title_query(query):
+    sentiment_profiles, doc_profiles = load_movie_profiles()
+    movie_list = sentiment_profiles.keys()
+    return_list = [movie for movie in movie_list if movie.startswith(query)]
+    return return_list
+
 def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     """Clean query, retrieve candidates, and rank."""
     # Load indexes, profiles, and emotion vectors
