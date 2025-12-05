@@ -1,5 +1,6 @@
 import os
-from query_processing import process_query, process_title_query
+from query_processing import process_query
+from ollama_integration import generate_text, build_prompt
 
 def main():
     print("\nMovie Search Engine\n")
@@ -44,14 +45,13 @@ def main():
         results = process_query(query, letterboxd_path, metacritic_path)
 
         if not results:
-            print("No results found.\n")
+            print("No emotionally relevant matches were found. The query did not contain enough sentiment/emotion cues for the system to identify suitable movies.\n")
             continue
-
+            
+        prompt_input = build_prompt(query, results)
+        output = generate_text(prompt_input)
         print("\n" + "-" * 60 + "\n")
-        print("Top Results:\n")
-        for i, (movie, score) in enumerate(results[:10], start=1):
-            print(f"{i:2d}. {movie:<40}  Score: {score:.4f}")
-
+        print(output)
         print("\n" + "-" * 60 + "\n")
 
 if __name__ == "__main__":
