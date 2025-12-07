@@ -29,7 +29,7 @@ def main():
                 print("""No movies found with that prefix""")
             else:
                 print("\n" + "-" * 60 + "\n")
-                print("Movies:\n")
+                print(f"Movies starting with {movie_prefix}:\n")
                 for i, movie in enumerate(title_results, start=1):
                     print(f"{i:2d}. {movie:<40}")
             continue
@@ -44,7 +44,15 @@ def main():
         results = process_query(query, letterboxd_path, metacritic_path)
 
         if not results:
-            print("No results found.\n")
+            print("No results found.\n\n Searching using standard title search")
+            title_results = process_title_query(query)
+            if len(title_results) == 0:
+                print("""No movies found with that prefix""")
+            else:
+                print("\n" + "-" * 60 + "\n")
+                print(f"Movies starting with {query}:\n")
+                for i, movie in enumerate(title_results, start=1):
+                    print(f"{i:2d}. {movie:<40}")
             continue
 
         print("\n" + "-" * 60 + "\n")
