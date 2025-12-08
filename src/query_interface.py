@@ -30,7 +30,7 @@ def main():
                 print("\nNo movies found with that prefix\n")
             else:
                 print("\n" + "-" * 60 + "\n")
-                print("Movies:")
+                print(f"Movies starting with {movie_prefix}:\n")
                 for i, movie in enumerate(title_results, start=1):
                     print(f"{i:2d}. {movie:<40}")
                 print("\n" + "-" * 60 + "\n")
@@ -46,7 +46,15 @@ def main():
         results = process_query(query, letterboxd_path, metacritic_path)
 
         if not results:
-            print("No emotionally relevant matches were found. The query did not contain enough sentiment/emotion cues for the system to identify suitable movies.\n")
+            print("No emotionally relevant matches were found. The query did not contain enough sentiment/emotion cues for the system to identify suitable movies.\n\n Searching using standard title search")
+            title_results = process_title_query(query)
+            if len(title_results) == 0:
+                print("""No movies found with that prefix""")
+            else:
+                print("\n" + "-" * 60 + "\n")
+                print(f"Movies starting with {query}:\n")
+                for i, movie in enumerate(title_results, start=1):
+                    print(f"{i:2d}. {movie:<40}")
             continue
             
         prompt_input = build_prompt(query, results)
