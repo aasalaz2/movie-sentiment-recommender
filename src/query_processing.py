@@ -30,8 +30,8 @@ def load_indexes(letterboxd_path, metacritic_path):
 
 def load_movie_profiles():
     """Load sentiment and document movie profiles."""
-    sentiment_df = pd.read_csv("data/processed/movie_sentiment_agg.csv")
-    docs_df = pd.read_csv("data/processed/movie_docs.csv")
+    sentiment_df = pd.read_csv("data/profiles/movie_sentiment_agg.csv")
+    docs_df = pd.read_csv("data/profiles/movie_docs.csv")
 
     sentiment_profile = sentiment_df.set_index("movie_name").to_dict(orient="index")
     docs_profile = docs_df.set_index("movie_name")["movie_doc"].to_dict()
@@ -174,7 +174,7 @@ def normalize_scores(scores):
 
 def process_title_query(query):
     query = query.lower()
-    sentiment_profiles, doc_profiles = load_movie_profiles()
+    sentiment_profiles, _ = load_movie_profiles()
     movie_list = sentiment_profiles.keys()
     return_list = [movie for movie in movie_list if movie.startswith(query)]
     return return_list
@@ -183,7 +183,7 @@ def process_query(query, letterboxd_path, metacritic_path, candidate_k=200):
     """Clean query, retrieve candidates, and rank."""
     # Load indexes, profiles, and emotion vectors
     letterboxd_index, metacritic_index = load_indexes(letterboxd_path, metacritic_path)
-    rating_profile, doc_profile = load_movie_profiles()
+    rating_profile, _ = load_movie_profiles()
     emotion_profile = load_movie_emotion_vectors()
     query_emotion_vec = compute_query_emotion_vector(query)
 

@@ -8,7 +8,7 @@ EMOTIONS = [
     "combined_disgust", "combined_surprise", "combined_trust", "combined_anticipation"
 ]
 
-def load_movie_emotion_vectors(path="data/processed/movie_emotion_sentiment.csv"):
+def load_movie_emotion_vectors(path="data/profiles/movie_emotion_sentiment.csv"):
     """Reads the movie_emotion_sentiment.csv file."""
     df = pd.read_csv(path)
 

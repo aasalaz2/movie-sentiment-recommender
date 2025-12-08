@@ -60,6 +60,6 @@ for e in EMOTIONS:
 
 # Save output
 combined.to_csv(
-    "data/processed/movie_emotion_sentiment.csv",
+    "data/profiles/movie_emotion_sentiment.csv",
     index=False
 )
