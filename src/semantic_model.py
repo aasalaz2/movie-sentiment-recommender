@@ -10,7 +10,7 @@ _semantic_loaded = False
 
 def build_semantic_index(
         in_path="data/processed/metacritic_reviews_clean.csv",
-        out_path="data/processed/movie_semantic_embeddings.npz"):
+        out_path="data/profiles/movie_semantic_embeddings.npz"):
     """Builds a semantic index of the given path."""
     print(f"Loading {in_path}...")
     df = pd.read_csv(in_path)
@@ -45,7 +45,7 @@ def build_semantic_index(
     np.savez(out_path, movie_names=names, embeddings=embeddings)
     print("Done. Saved to {out_path}")
 
-def load_semantic_index(path="data/processed/movie_semantic_embeddings.npz"):
+def load_semantic_index(path="data/profiles/movie_semantic_embeddings.npz"):
     """Load NPZ embedding + initialize sentence-transformer model."""
     global _semantic_model, _semantic_embeddings, _semantic_movie_names, _semantic_loaded
 

@@ -5,7 +5,7 @@ from utils import normalize_movie_name
 
 merged = Path("data/processed/merged_movies.csv")
 
-outdir = Path("data/processed")
+outdir = Path("data/profiles")
 outdir.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(merged)

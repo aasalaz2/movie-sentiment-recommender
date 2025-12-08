@@ -1,10 +1,10 @@
 import os
-from query_processing import process_query
+from query_processing import process_query, process_title_query
 from ollama_integration import generate_text, build_prompt
 
 def main():
     print("\nMovie Search Engine\n")
-    print("Type a search query (or 'exit' to quit):\n")
+    print("Type a search query ('-help' for options, or 'exit' to quit):\n")
 
     letterboxd_path = "indexes/letterboxd_index.json"
     metacritic_path = "indexes/metacritic_index.json"
@@ -21,18 +21,19 @@ def main():
             print("\nGoodbye!\n")
             break
         if query.lower() == "-help":
-            print("""The following is a sentiment based movie search engine. Enter a query about the emotional tone of a movie and\nwe will return the most relevant movies to your query.\nYou can also enter -title to do a standard title search to view available movies""")
+            print("\nThe following is a sentiment based movie search engine. Enter a query about the emotional tone of a movie and\nwe will return the most relevant movies to your query.\nYou can also enter -title to do a standard title search to view available movies\n")
             continue
         if query.lower() == "-title":
-            movie_prefix = input("Enter a movie title/prefix: ").strip()
+            movie_prefix = input("\nEnter a movie title/prefix: ").strip()
             title_results = process_title_query(movie_prefix)
             if len(title_results) == 0:
-                print("""No movies found with that prefix""")
+                print("\nNo movies found with that prefix\n")
             else:
                 print("\n" + "-" * 60 + "\n")
                 print(f"Movies starting with {movie_prefix}:\n")
                 for i, movie in enumerate(title_results, start=1):
                     print(f"{i:2d}. {movie:<40}")
+                print("\n" + "-" * 60 + "\n")
             continue
 
 

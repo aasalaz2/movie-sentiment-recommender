@@ -11,6 +11,19 @@ This project combines:
 * Weighted hybrid scoring & ranking
 * LLM-based refinement using LLaMA 3 via Ollama
 
+## How the Software Works
+The system operates in a modular pipeline:
+1. **Data Preprocessing** \
+   Cleans the raw Letterboxd and Metacritic datasets, computes sentiment and emotion vectors, and builds BM25 and semantic indexes. Implemented in `run_data_pipeline.py` and preprocessing scripts.
+2. **Query Processing** \
+   The user query is processed using BM25 lexical search, MiniLM semantic embeddings, sentiment alignment, and emotion-vector similarity. Implemented in `src/query_processing.py`.
+3. **Hybrid Ranking** \
+   The system combines lexical, semantic, sentiment, and emotion scores using a weighted formula to produce a ranked list of candidate movies.
+4. **LLM Refinement (Ollama + LLaMA 3)** \
+   The top movies and query context are passed to the LLM (`ollama_integration.py`) to generate an explanation and refined ranking.
+5. **Command-Line Interface** \
+   `run_movie_recommender.py` provides the interactive CLI, loads indexes, handles user input, and displays results.
+
 ## Data Source
 This recommender uses the public **Movie Reviews Dataset: 10k+ Scraped Data** from Kaggle, available here:
 https://www.kaggle.com/datasets/joyshil0599/movie-reviews-dataset-10k-scraped-data/data.
@@ -20,7 +33,7 @@ If needed, download the dataset and place the CSV files into:
 data/raw
 ```
 
-This is the only dataset required for the data pipeline to run successfully
+This is the only dataset required for the data pipeline.
 
 ## Files
 
@@ -80,7 +93,7 @@ ollama pull llama3
 ```
 
 ### 5. Run the Data Pipeline
-This builds all cleaned datasets, sentiment profiles, indexes, and semantic embeddings.
+This builds cleaned datasets, sentiment profiles, indexes, and semantic embeddings.
 ```bash
 python run_data_pipeline.py
 ```
