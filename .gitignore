@@ -1,1 +1,5 @@
 movie_env/
+data/processed/*
+data/profiles/*
+data/reports/*
+indexes/*
