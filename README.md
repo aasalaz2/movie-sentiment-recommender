@@ -55,6 +55,7 @@ src/query_interface.py
 Follow these steps to set up the environment, run the data pipeline, and start the movie recommender.
 
 ### 1. Create a Virtual Environment
+For reliable dependency installation, please use **Python 3.12 or higher**. 
 ```bash
 python -m venv movie_env
 ```
