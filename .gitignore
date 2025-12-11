@@ -3,3 +3,5 @@ data/processed/*
 data/profiles/*
 data/reports/*
 indexes/*
+__pycache__/
+*.pyc
